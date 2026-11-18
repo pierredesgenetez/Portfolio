@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pierre Desgenetez</title>
+<meta name="description" content="Pierre Desgenetez, chargé de communication freelance et photographe. Stratégie, charte graphique et gestion des réseaux sociaux.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,800&family=Figtree:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout : site multi-pages aéré, colonnes asymétriques, objets en pâte à modeler posés en marge des pages, petits détails d'atelier (gribouillis, pastilles, pellicule). */
+:root{
+  --white:#ffffff; --ink:#3b413c; --sage:#9db5b2; --foam:#daf0ee; --mint:#94d1be;
+  --bg:#ffffff; --surface:#f2f9f8; --surface-2:#e6f4f2; --text:#3b413c; --muted:#66716b; --line:#d6e6e3;
+  --btn-bg:#3b413c; --btn-fg:#ffffff; --chip-bg:#daf0ee; --chip-fg:#3b413c; --mint-ink:#2f6f5f; --blob:#e9f6f4;
+  --clay-ink:#3b413c; --clay-sage:#9db5b2; --clay-foam:#daf0ee; --clay-mint:#94d1be; --clay-white:#ffffff; --clay-deep:#7f9995;
+  --shadow:rgba(59,65,60,.20); --grain:.05;
+  --f-display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --f-body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --s1:.25rem; --s2:.5rem; --s3:.75rem; --s4:1rem; --s5:1.5rem; --s6:2rem; --s7:3rem; --s8:4.5rem; --s9:7rem;
+  --r-sm:10px; --r-md:18px; --r-lg:28px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1c211e; --surface:#242a26; --surface-2:#2c3430; --text:#e8f4f1; --muted:#a6b7b2; --line:#36403a;
+  --btn-bg:#94d1be; --btn-fg:#1c211e; --chip-bg:#2f3a35; --chip-fg:#daf0ee; --mint-ink:#94d1be; --blob:#222925;
+  --clay-ink:#56615a; --clay-white:#eef7f5; --clay-deep:#6f8783; --shadow:rgba(0,0,0,.45); --grain:.07; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1c211e; --surface:#242a26; --surface-2:#2c3430; --text:#e8f4f1; --muted:#a6b7b2; --line:#36403a;
+  --btn-bg:#94d1be; --btn-fg:#1c211e; --chip-bg:#2f3a35; --chip-fg:#daf0ee; --mint-ink:#94d1be; --blob:#222925;
+  --clay-ink:#56615a; --clay-white:#eef7f5; --clay-deep:#6f8783; --shadow:rgba(0,0,0,.45); --grain:.07; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:var(--grain);mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+main{overflow-x:clip}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));position:relative}
+@media(min-width:700px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:650;line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mint);outline-offset:3px;border-radius:6px}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:.5rem}
+.eyebrow.dot::before{content:"";width:9px;height:9px;border-radius:52% 48% 46% 54%;background:var(--mint);box-shadow:inset -1.5px -2px 0 rgba(0,0,0,.14),inset 1.5px 1.5px 0 rgba(255,255,255,.55)}
+.lede{font-size:1.2rem;color:var(--muted);max-width:60ch}
+.sec{padding-block:var(--s7) var(--s8);position:relative}
+@media(min-width:900px){.sec{padding-block:var(--s8) var(--s9)}}
+.sec-head{display:grid;gap:var(--s4);margin-bottom:var(--s7);max-width:760px}
+.sec-head h2{font-size:clamp(2.1rem,5vw,3.4rem)}
+.scribble{position:relative;white-space:nowrap;z-index:0}
+.view{isolation:isolate}
+.scribble::after{content:"";position:absolute;left:-2%;right:-2%;bottom:-.18em;height:.32em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cpath d='M3 13 C 30 4, 52 18, 80 10 S 130 4, 155 11 S 188 14, 197 7' fill='none' stroke='%2394d1be' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/100% 100%;z-index:-1}
+.deco-blob{position:absolute;border-radius:58% 42% 47% 53% / 48% 56% 44% 52%;background:var(--blob);z-index:-1;pointer-events:none}
+
+/* Clay objects */
+.clay{display:block;filter:drop-shadow(0 16px 18px var(--shadow)) drop-shadow(0 3px 4px var(--shadow));overflow:visible}
+.c-ink{fill:var(--clay-ink)}.c-sage{fill:var(--clay-sage)}.c-foam{fill:var(--clay-foam)}.c-mint{fill:var(--clay-mint)}.c-white{fill:var(--clay-white)}.c-deep{fill:var(--clay-deep)}
+.k-sage{fill:none;stroke:var(--clay-sage)}.k-mint{fill:none;stroke:var(--clay-mint)}.k-deep{fill:none;stroke:var(--clay-deep)}
+.float{animation:float 7s ease-in-out infinite}
+.float.d2{animation-delay:-2.3s}.float.d3{animation-delay:-4.6s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--rot,0deg))}50%{transform:translateY(-10px) rotate(calc(var(--rot,0deg) + 2deg))}}
+.squish{transition:scale .35s cubic-bezier(.3,1.6,.5,1)}
+.squish:hover{scale:1.06 .95}
+@media (prefers-reduced-motion:reduce){.float{animation:none}.squish{transition:none}}
+
+/* Stickers */
+.sticker{position:absolute;width:104px;height:104px;border-radius:50%;background:var(--mint);color:#1c211e;display:grid;place-items:center;text-align:center;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.25;padding:14px;transform:rotate(var(--rot,-10deg));box-shadow:0 10px 18px -8px var(--shadow),inset -3px -4px 0 rgba(0,0,0,.08),inset 3px 3px 0 rgba(255,255,255,.4);z-index:2}
+.sticker::before{content:"";position:absolute;inset:6px;border-radius:50%;border:1.5px dashed rgba(28,33,30,.35)}
+.sticker b{display:block;font-family:var(--f-display);font-size:1.25rem;letter-spacing:-.02em;text-transform:none;font-weight:800}
+.sticker.foam{background:var(--foam)}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);padding-block:var(--s4) var(--s3)}
+.brand{font-family:var(--f-display);font-weight:800;font-size:1.15rem;text-decoration:none;letter-spacing:-.02em;display:flex;align-items:center;gap:.55rem;white-space:nowrap}
+.brand-dot{width:14px;height:14px;border-radius:50% 46% 52% 48%;background:var(--mint);box-shadow:inset -2px -3px 0 rgba(0,0,0,.12),inset 2px 2px 0 rgba(255,255,255,.5)}
+.nav{display:flex;gap:var(--s2);align-items:center}
+.nav a{text-decoration:none;font-weight:500;font-size:.95rem;padding:.45rem .85rem;border-radius:999px;color:var(--muted);white-space:nowrap;flex:none}
+.nav a:hover{color:var(--text);background:var(--surface)}
+.nav a[aria-current="page"]{color:var(--text);background:var(--surface-2)}
+.nav a.cta{background:var(--btn-bg);color:var(--btn-fg)}
+.nav a.cta[aria-current="page"]{box-shadow:0 0 0 3px var(--mint)}
+.nav-group{position:relative;display:flex;gap:2px;padding:3px;border:1.5px solid var(--line);border-radius:999px;flex:none;transition:border-color .2s}
+.nav-group:has([aria-current="page"]){border-color:var(--mint)}
+.nav-group .ng-label{position:absolute;top:-.62rem;left:16px;padding:0 6px;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mint-ink);background:var(--bg);border-radius:4px;line-height:1.1rem}
+.nav-group a{padding:.35rem .8rem}
+@media(max-width:1080px){
+  .top .wrap{flex-wrap:wrap;row-gap:var(--s3)}
+  .nav{width:100%;overflow-x:auto;scrollbar-width:none;padding-top:.7rem;padding-bottom:2px}
+  .nav::-webkit-scrollbar{display:none}
+}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:600 1rem var(--f-body);padding:.85rem 1.35rem;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn-primary{background:var(--btn-bg);color:var(--btn-fg);box-shadow:0 6px 0 -2px color-mix(in srgb,var(--btn-bg) 55%,#000 45%)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:var(--surface-2);color:var(--text)}
+.btn-ghost:hover{transform:translateY(-2px)}
+
+/* Hero */
+.hero{padding-block:var(--s7) var(--s6);position:relative}
+.hero-grid{display:grid;gap:var(--s7);align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:var(--s6)}}
+.hero h1{font-size:clamp(3rem,9vw,6.4rem);font-weight:800;letter-spacing:-.045em;line-height:.92}
+.hero h1 span{display:block;color:var(--sage)}
+.hero-copy{display:grid;gap:var(--s5)}
+.hero-copy .lede{font-size:clamp(1.15rem,2vw,1.35rem);color:var(--text);max-width:34ch}
+.status{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--f-mono);font-size:.8rem;padding:.4rem .8rem;border-radius:999px;background:var(--chip-bg);color:var(--chip-fg);width:fit-content}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px color-mix(in srgb,var(--mint) 35%,transparent);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px color-mix(in srgb,var(--mint) 10%,transparent)}}
+@media (prefers-reduced-motion:reduce){.status i{animation:none}}
+.actions{display:flex;flex-wrap:wrap;gap:var(--s3)}
+.hero-art{position:relative;aspect-ratio:1/0.92;max-width:520px;width:100%;justify-self:center}
+.hero-blob{position:absolute;inset:6% 4% 4% 6%;background:var(--surface-2);border-radius:58% 42% 47% 53% / 48% 56% 44% 52%}
+.hero-art .laptop{position:absolute;width:74%;left:12%;top:24%}
+.hero-art .brush{position:absolute;width:21%;right:2%;top:2%;--rot:24deg;transform:rotate(24deg)}
+.hero-art .watch{position:absolute;width:24%;left:-2%;top:2%;--rot:-12deg;transform:rotate(-12deg)}
+.hero-art .sticker{right:-2%;bottom:2%;--rot:12deg}
+
+/* Marquee */
+.marquee{margin-block:var(--s5) 0;overflow:hidden;padding-block:var(--s4)}
+.marquee-band{background:var(--mint);color:#1c211e;transform:rotate(-1.4deg);margin-inline:-20px;overflow:hidden;box-shadow:0 10px 24px -14px var(--shadow)}
+.marquee-track{display:flex;width:max-content;animation:slide 38s linear infinite}
+.marquee-track span{font-family:var(--f-display);font-weight:650;font-size:clamp(1.1rem,2.4vw,1.5rem);letter-spacing:-.01em;padding:.7rem 0;white-space:nowrap;display:flex;align-items:center}
+.marquee-track span::after{content:"";width:12px;height:12px;margin-inline:1.4rem;border-radius:52% 48% 46% 54%;background:#ffffff;box-shadow:inset -1.5px -2px 0 rgba(0,0,0,.12)}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+
+/* Trust logos */
+.refs{margin-top:var(--s6);display:grid;gap:var(--s4)}
+.logos{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.logo-link{display:flex;align-items:center;gap:var(--s4);padding:var(--s3) var(--s4) var(--s3) var(--s3);border-radius:var(--r-md);border:1.5px solid var(--line);text-decoration:none;transition:transform .25s,border-color .25s,background .25s}
+.logo-link:hover{transform:translateY(-3px);border-color:var(--sage);background:var(--surface)}
+.logo-tile{width:64px;height:64px;flex:none;border-radius:14px;background:#ffffff;display:grid;place-items:center;padding:7px;box-shadow:0 1px 0 var(--line),0 6px 14px -10px var(--shadow)}
+.logo-tile img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.logo-link strong{font-family:var(--f-display);font-weight:650;font-size:1.08rem;line-height:1.15;display:block}
+.logo-link small{color:var(--muted);font-size:.85rem}
+.logo-link .arr{margin-left:auto;color:var(--mint-ink);font-weight:600;transition:transform .2s}
+.logo-link:hover .arr{transform:translateX(4px)}
+
+/* Facts row */
+.figures{margin-top:var(--s7);display:flex;flex-wrap:wrap;gap:var(--s5) var(--s7);padding-block:var(--s5);border-block:1.5px solid var(--line)}
+.figures div{display:flex;align-items:baseline;gap:var(--s3)}
+.figures b{font-family:var(--f-display);font-weight:800;font-size:2.6rem;line-height:1;color:var(--mint-ink);font-variant-numeric:tabular-nums}
+.figures span{color:var(--muted);max-width:14ch;line-height:1.3;font-size:.95rem}
+
+.teasers{margin-top:var(--s7);display:grid;gap:var(--s4)}
+@media(min-width:800px){.teasers{grid-template-columns:repeat(3,1fr)}}
+.teaser{display:grid;gap:var(--s2);padding:var(--s5) var(--s6);border-radius:var(--r-lg);background:var(--surface);text-decoration:none;transition:transform .25s,background .25s;position:relative;overflow:hidden}
+.teaser:hover{transform:translateY(-4px);background:var(--surface-2)}
+.teaser strong{font-family:var(--f-display);font-weight:650;font-size:1.5rem;letter-spacing:-.02em}
+.teaser span{color:var(--muted)}
+.teaser .go{font-weight:600;color:var(--mint-ink)}
+.teaser .mini{position:absolute;right:-10px;bottom:-14px;width:84px;opacity:.9;transform:rotate(-12deg)}
+
+/* Communication switch */
+.comm-switch{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s3) var(--s4);margin-bottom:var(--s6)}
+.seg{display:flex;padding:4px;border-radius:999px;background:var(--surface-2);gap:2px;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.seg a{text-decoration:none;font-weight:600;font-size:.95rem;padding:.55rem 1.1rem;border-radius:999px;color:var(--muted);white-space:nowrap}
+.seg a[aria-current="page"]{background:var(--bg);color:var(--text);box-shadow:0 2px 8px -3px var(--shadow)}
+.crumbs{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;font-size:.92rem;color:var(--muted);margin-bottom:var(--s5)}
+.crumbs a{text-decoration:none;font-weight:600}
+.crumbs a:hover{color:var(--text)}
+.crumbs span[aria-hidden]{opacity:.5}
+
+/* Services */
+.svc-grid{display:grid;gap:var(--s4)}
+@media(min-width:800px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc{background:var(--surface);border-radius:var(--r-lg);padding:var(--s6);display:grid;gap:var(--s3);align-content:start;position:relative}
+.svc .tag{font-family:var(--f-mono);font-size:.75rem;color:var(--mint-ink);letter-spacing:.06em;text-transform:uppercase}
+.svc h3{font-size:1.55rem}
+.svc p{color:var(--muted)}
+.svc .ico{width:46px;height:46px;border-radius:15px 13px 16px 12px;display:grid;place-items:center;background:var(--mint);box-shadow:inset -3px -4px 0 rgba(0,0,0,.1),inset 3px 3px 0 rgba(255,255,255,.45),0 8px 14px -8px var(--shadow)}
+.svc .ico svg{width:24px;height:24px;stroke:#1c211e;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc:nth-child(2) .ico{background:var(--foam)}.svc:nth-child(3) .ico{background:var(--sage)}
+.svc-note{margin-top:var(--s5);display:flex;flex-wrap:wrap;gap:var(--s2)}
+.chip{font-size:.85rem;font-weight:500;padding:.35rem .75rem;border-radius:999px;background:var(--chip-bg);color:var(--chip-fg);white-space:nowrap}
+.method{margin-top:var(--s8);display:grid;gap:var(--s6);align-items:center}
+@media(min-width:900px){.method{grid-template-columns:220px 1fr}}
+.method-art{display:grid;justify-items:center;gap:var(--s3);text-align:center}
+.method-art svg{width:150px}
+.method-art p{font-family:var(--f-display);font-weight:650;font-size:1.1rem;max-width:16ch}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3)}
+@media(min-width:700px){.steps{grid-template-columns:repeat(5,1fr)}}
+.steps li{display:grid;gap:var(--s2);padding:var(--s4);border-top:3px solid var(--mint);background:var(--surface);border-radius:0 0 var(--r-sm) var(--r-sm);align-content:start}
+.steps b{font-family:var(--f-mono);font-weight:500;font-size:.78rem;color:var(--muted)}
+.steps strong{font-family:var(--f-display);font-size:1.2rem;font-weight:650}
+.steps span{font-size:.92rem;color:var(--muted);line-height:1.45}
+
+/* Projects */
+.proj-cards{display:grid;gap:var(--s4)}
+@media(min-width:900px){.proj-cards{grid-template-columns:repeat(3,1fr)}}
+.proj-card{display:grid;gap:var(--s3);align-content:start;padding:var(--s6);border-radius:var(--r-lg);border:1.5px solid var(--line);text-decoration:none;transition:transform .25s,border-color .25s,background .25s}
+.proj-card:hover{transform:translateY(-4px);border-color:var(--sage);background:var(--surface)}
+.proj-card .logo-tile{width:88px;height:88px;border-radius:20px;padding:10px;margin-bottom:var(--s2);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.proj-card:hover .logo-tile{transform:rotate(-5deg) scale(1.05)}
+.proj-card h3{font-size:1.75rem}
+.proj-card p{color:var(--muted)}
+.proj-card .go{margin-top:var(--s3);font-weight:600;color:var(--mint-ink)}
+.panel{display:grid;gap:var(--s6)}
+.p-intro{display:grid;gap:var(--s5);padding:var(--s6);border-radius:var(--r-lg);background:var(--surface);position:relative;overflow:hidden}
+@media(min-width:900px){.p-intro{grid-template-columns:1.3fr 1fr;padding:var(--s7)}}
+.p-intro .logo-tile{width:104px;height:104px;border-radius:24px;padding:12px}
+.p-intro h3{font-size:clamp(1.9rem,4vw,2.8rem)}
+.p-intro::after{content:"";position:absolute;width:220px;height:220px;right:-70px;top:-80px;border-radius:58% 42% 47% 53% / 48% 56% 44% 52%;background:var(--surface-2);z-index:0}
+.p-intro > *{position:relative;z-index:1}
+.p-meta{display:grid;gap:var(--s3);align-content:start;margin:0}
+.meta-row{display:grid;grid-template-columns:7.5rem 1fr;gap:var(--s3);font-size:.95rem;padding-bottom:var(--s3);border-bottom:1px solid var(--line)}
+.meta-row dt{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.meta-row dd{margin:0;min-width:0}
+.live{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--f-mono);font-size:.75rem;padding:.2rem .6rem;border-radius:999px;background:var(--mint);color:#1c211e;text-transform:uppercase;letter-spacing:.06em}
+.blocks{display:grid;gap:var(--s4)}
+@media(min-width:760px){.blocks{grid-template-columns:repeat(2,1fr)}}
+.block{display:grid;gap:var(--s2);padding:var(--s5);border:1.5px solid var(--line);border-radius:var(--r-md);align-content:start}
+.block h4{font-size:1.25rem}
+.block p,.block li{color:var(--muted);font-size:.98rem}
+.block ul{margin:0;padding-left:1.1rem;display:grid;gap:.3rem}
+.block.focus{background:var(--surface-2);border-color:transparent}
+.subtabs{display:flex;flex-wrap:wrap;gap:var(--s2);border-bottom:1.5px solid var(--line)}
+.subtab{font:600 .95rem var(--f-body);padding:.7rem .2rem;margin-right:var(--s4);border:0;background:none;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1.5px}
+.subtab[aria-selected="true"]{color:var(--text);border-bottom-color:var(--mint)}
+.sub{display:grid;gap:var(--s4);padding-top:var(--s5)}
+.kpis{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.kpi{padding:var(--s5);border-radius:var(--r-md);border:1.5px dashed var(--sage);display:grid;gap:var(--s1)}
+.kpi .v{font-family:var(--f-display);font-weight:800;font-size:2.4rem;line-height:1;color:var(--sage);font-variant-numeric:tabular-nums}
+.kpi .l{font-size:.92rem;color:var(--muted)}
+.kpi.done{border-style:solid;border-color:transparent;background:var(--surface)}
+.kpi.done .v{color:var(--mint-ink)}
+.kpi .from{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.bilan{display:grid;gap:var(--s3)}
+.bilan .kpi.done{background:var(--surface-2)}
+@media(min-width:760px){.sub .kpis,.bilan .kpis{grid-template-columns:repeat(3,1fr)}#sp-cdf .kpis{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){#sp-cdf .kpis{grid-template-columns:repeat(4,1fr)}}
+.cdf-intro{display:grid;gap:var(--s5)}
+.cdf-intro .lede{color:var(--text);max-width:68ch}
+.cdf-facts{display:grid;gap:var(--s3)}
+@media(min-width:760px){.cdf-facts{grid-template-columns:repeat(3,1fr)}}
+.cdf-facts div{display:grid;gap:.2rem;padding:var(--s4) var(--s5);border-left:3px solid var(--mint);background:var(--surface);border-radius:0 var(--r-sm) var(--r-sm) 0}
+.cdf-facts b{font-family:var(--f-display);font-weight:800;font-size:1.9rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.cdf-facts span{color:var(--muted);font-size:.93rem;line-height:1.4}
+.cdf-title{font-size:1.6rem;margin-top:var(--s5)}
+.cdf-sub{color:var(--muted);margin-top:calc(-1 * var(--s3))}
+.phases{list-style:none;margin:0;padding:0;display:grid;gap:var(--s4);counter-reset:ph}
+@media(min-width:900px){.phases{grid-template-columns:repeat(3,1fr)}}
+.phase{display:grid;gap:var(--s3);align-content:start;padding:var(--s5);border-radius:var(--r-md);border:1.5px solid var(--line);position:relative;counter-increment:ph}
+.phase::before{content:counter(ph);position:absolute;top:var(--s4);right:var(--s4);width:30px;height:30px;border-radius:52% 48% 46% 54%;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;background:var(--mint);color:#1c211e;box-shadow:inset -2px -3px 0 rgba(0,0,0,.12),inset 2px 2px 0 rgba(255,255,255,.45)}
+.ph-date{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mint-ink)}
+.phase h5{font-family:var(--f-display);font-weight:650;font-size:1.3rem;margin:0;padding-right:40px}
+.view[data-view="caisse-epargne"] .panel{gap:var(--s5)}
+.ph-why{color:var(--text);font-style:italic;font-size:.97rem}
+.phase ul{margin:0;padding-left:1.1rem;display:grid;gap:.5rem}
+.phase li{color:var(--muted);font-size:.94rem;line-height:1.5}
+.phase li strong,.block li strong{color:var(--text);font-weight:600}
+.cdf-results{display:grid;gap:var(--s4);margin-top:var(--s4)}
+.quote{margin:0;padding:var(--s5) var(--s6);border-radius:var(--r-md);background:var(--surface-2);font-family:var(--f-display);font-weight:500;font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.35;display:grid;gap:var(--s3)}
+.quote cite{font-family:var(--f-mono);font-style:normal;font-size:.75rem;letter-spacing:.04em;color:var(--muted)}
+.recul{border-style:dashed}
+#sp-cdf{gap:var(--s5)}
+.week{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3)}
+@media(min-width:760px){.week{grid-template-columns:repeat(5,1fr)}}
+.week li{display:grid;gap:var(--s2);align-content:start;padding:var(--s4);background:var(--surface);border-top:3px solid var(--mint);border-radius:0 0 var(--r-sm) var(--r-sm)}
+.week h5{font-family:var(--f-display);font-weight:650;font-size:1.1rem;margin:0}
+.week p{color:var(--muted);font-size:.92rem;line-height:1.45}
+.listen{display:grid;gap:var(--s4)}
+@media(min-width:760px){.listen{grid-template-columns:1fr 1fr}.listen .quote{grid-column:1 / -1}}
+#sp-s1,#sp-s2{gap:var(--s5)}
+.kpi .todo{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mint-ink)}
+.shots{display:grid;gap:var(--s3);grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.shots{grid-template-columns:repeat(4,1fr)}}
+.shot{aspect-ratio:4/5;border-radius:var(--r-sm);background:repeating-linear-gradient(135deg,var(--surface) 0 12px,var(--surface-2) 12px 24px);display:grid;place-items:center;color:var(--muted);font-family:var(--f-mono);font-size:.72rem;text-align:center;padding:var(--s3);max-width:100%}
+.shot.wide{grid-column:span 2;aspect-ratio:8/5}
+.rcf-photos{margin-top:var(--s4);padding:var(--s6);border-radius:var(--r-lg);background:var(--ink);color:#e8f4f1;display:grid;gap:var(--s5)}
+:root[data-theme="dark"] .rcf-photos{background:#151917}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .rcf-photos{background:#151917}}
+.rcf-photos-head{display:grid;gap:var(--s2)}
+.rcf-photos-head .eyebrow{color:#b7cac6}
+.rcf-photos-head h4{font-size:clamp(1.6rem,3.5vw,2.2rem);color:#fff}
+.rcf-photos-head p{color:#b7cac6}
+.rcf-photos-grid{display:grid;gap:var(--s4);grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.rcf-card{display:grid;gap:var(--s2);text-decoration:none;color:#fff;transition:transform .25s}
+.rcf-card:hover{transform:translateY(-4px) rotate(-.6deg)}
+.rcf-card .cover{aspect-ratio:4/3}
+.rcf-card strong{font-family:var(--f-display);font-weight:650;font-size:1.15rem}
+.rcf-card span.go{font-size:.9rem;color:var(--mint)}
+.rcf-photos-all{justify-self:start;font-weight:600;color:var(--mint);text-decoration:none}
+.rcf-photos-all:hover{text-decoration:underline}
+.newsletter{display:grid;gap:var(--s5);padding:var(--s6);border-radius:var(--r-lg);background:var(--surface-2);position:relative;overflow:hidden}
+@media(min-width:900px){.newsletter{grid-template-columns:1.2fr 1fr;align-items:center;padding:var(--s7)}}
+.newsletter::after{content:"";position:absolute;width:200px;height:200px;right:-60px;bottom:-90px;border-radius:58% 42% 47% 53% / 48% 56% 44% 52%;background:var(--foam);opacity:.6}
+.newsletter > *{position:relative;z-index:1}
+.nl-text{display:grid;gap:var(--s3);max-width:58ch}
+.nl-text h4{font-size:clamp(1.6rem,3.5vw,2.2rem)}
+.nl-text p{color:var(--muted)}
+.nl-facts{grid-template-columns:1fr!important}
+.nl-facts div{background:var(--bg)}
+.ig-grid{display:grid;gap:var(--s4);align-items:start;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:900px){.ig-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.ig-grid.ig-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.ig{margin:0;display:grid;gap:var(--s2)}
+.ig button{all:unset;cursor:zoom-in;display:block;border-radius:var(--r-sm);overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line),0 10px 22px -16px var(--shadow);transition:transform .25s}
+.ig button:hover{transform:translateY(-3px)}
+.ig button:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.ig img{display:block;width:100%;height:auto}
+.ig figcaption{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+
+
+/* Photography */
+.photo{background:var(--ink);color:#e8f4f1}
+:root[data-theme="dark"] .photo{background:#151917}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .photo{background:#151917}}
+.perf{height:22px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='22'%3E%3Crect x='10' y='5' width='14' height='12' rx='3' fill='%23ffffff' fill-opacity='.16'/%3E%3C/svg%3E") repeat-x;margin-bottom:var(--s6)}
+.perf.bottom{margin:var(--s7) 0 0}
+.photo .eyebrow,.photo .lede{color:#b7cac6}
+.photo .eyebrow.dot::before{background:var(--mint)}
+.photo-head{display:grid;gap:var(--s6);align-items:center;margin-bottom:var(--s7)}
+@media(min-width:900px){.photo-head{grid-template-columns:1fr 300px}}
+.photo-head h2{font-size:clamp(2.1rem,5vw,3.4rem);color:#ffffff}
+.photo-head .camera{width:min(280px,76%);justify-self:center;--rot:-6deg;transform:rotate(-6deg)}
+.photo-head .camera .c-ink{fill:#2a302c}
+.series{display:grid;gap:var(--s5);grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.serie{all:unset;cursor:pointer;display:grid;gap:var(--s3);border-radius:var(--r-md);transition:transform .25s}
+.serie:hover{transform:translateY(-4px) rotate(-.6deg)}
+.serie:focus-visible{outline:3px solid var(--mint);outline-offset:4px}
+.cover{aspect-ratio:4/3;border-radius:var(--r-md);overflow:hidden;position:relative;background:#2c3330;max-width:100%;border:8px solid #f4faf9;border-bottom-width:30px;box-shadow:0 14px 28px -16px rgba(0,0,0,.7)}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.cover .ph{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#4a544e,#2c3330 70%)}
+.cover .ph span{font-family:var(--f-mono);font-size:.75rem;color:#b7cac6;letter-spacing:.06em;text-transform:uppercase}
+.cover .count{position:absolute;right:8px;top:8px;font-family:var(--f-mono);font-size:.72rem;padding:.25rem .6rem;border-radius:999px;background:rgba(28,33,30,.75);color:#daf0ee}
+.serie h3{font-size:1.3rem;color:#ffffff}
+.serie p{font-size:.92rem;color:#b7cac6}
+.accred{margin-top:var(--s7);display:flex;flex-wrap:wrap;gap:var(--s4);align-items:center;justify-content:space-between;padding:var(--s5) var(--s6);border-radius:var(--r-lg);background:rgba(148,209,190,.12);border:1px solid rgba(148,209,190,.3)}
+.accred p{max-width:52ch;color:#daf0ee;font-size:1.12rem}
+.accred p strong{font-family:var(--f-display);font-weight:650;color:#ffffff;font-size:1.3rem;display:block;margin-bottom:.2rem}
+.photo .btn-primary{background:var(--mint);color:#1c211e;box-shadow:0 6px 0 -2px #5f9f8c}
+
+dialog{border:0;padding:0;max-width:min(1100px,94vw);width:100%;max-height:90vh;border-radius:var(--r-lg);background:var(--bg);color:var(--text)}
+dialog::backdrop{background:rgba(20,24,22,.7);backdrop-filter:blur(4px)}
+.dlg-head{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:var(--s4);padding:var(--s4) var(--s5);background:var(--bg);border-bottom:1px solid var(--line);z-index:2}
+.dlg-head h3{font-size:1.4rem}
+.dlg-body{padding:var(--s5)}
+.masonry{display:flex;gap:var(--s3);align-items:flex-start}
+.masonry .col{flex:1;min-width:0;display:grid;gap:var(--s3)}
+.masonry button{all:unset;cursor:zoom-in;display:block;border-radius:var(--r-sm);overflow:hidden}
+.masonry button:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.masonry img{display:block;width:100%;height:auto}
+.empty{display:grid;justify-items:center;gap:var(--s3);text-align:center;padding:var(--s7) var(--s4);color:var(--muted)}
+.empty svg{width:140px}
+.lightbox{position:fixed;inset:0;z-index:50;background:rgba(14,17,15,.94);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+dialog.lightbox{max-width:none;max-height:none;width:100%;height:100%;margin:0;border-radius:0;background:rgba(14,17,15,.96);color:#fff}
+dialog.lightbox:not([open]){display:none}
+dialog.lightbox::backdrop{background:transparent}
+.lightbox img{max-width:100%;max-height:84vh;border-radius:8px}
+.lb-btn{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));border:0;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:1.3rem;cursor:pointer}
+.lb-close{right:calc(16px + env(safe-area-inset-right,0px))}
+.lb-prev,.lb-next{top:50%;transform:translateY(-50%)}
+.lb-prev{left:calc(12px + env(safe-area-inset-left,0px))}.lb-next{right:calc(12px + env(safe-area-inset-right,0px))}
+
+/* About */
+.about-grid{display:grid;gap:var(--s7);align-items:start}
+@media(min-width:900px){.about-grid{grid-template-columns:1.1fr .9fr}}
+.about h2{font-size:clamp(2.4rem,6vw,4rem)}
+.about-text{display:grid;gap:var(--s4);max-width:58ch}
+.about-text p{font-size:1.12rem}
+.route{margin-top:var(--s7);display:grid;gap:var(--s3)}
+.route svg{width:100%;height:auto;max-width:640px;overflow:visible}
+.route .r-line{fill:none;stroke:var(--sage);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2 10}
+.route .r-fill{fill:var(--surface-2)}
+.route .r-pt{fill:var(--bg);stroke:var(--sage);stroke-width:4}
+.route .r-pt.now{fill:var(--mint);stroke:var(--mint-ink)}
+.route .r-lbl{font-family:var(--f-display);font-weight:650;font-size:22px;fill:var(--text)}
+.route .r-sub{font-family:var(--f-mono);font-size:13px;letter-spacing:.06em;fill:var(--muted);text-transform:uppercase}
+.route .r-flag{fill:var(--mint)}
+.route .r-pole{stroke:var(--text);stroke-width:3;stroke-linecap:round}
+.facts{display:grid;gap:0;margin:0;border-top:1.5px solid var(--line)}
+.facts div{display:grid;grid-template-columns:8rem 1fr;gap:var(--s3);padding:var(--s4) 0;border-bottom:1.5px solid var(--line)}
+.facts dt{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.facts dd{margin:0;min-width:0}
+.about-art{position:relative;height:150px;margin-bottom:var(--s4)}
+.about-art .ball{position:absolute;right:8px;top:0;width:120px;--rot:10deg}
+.about-art .sticker{left:10px;top:20px;--rot:-8deg}
+
+/* Contact */
+.contact-grid{display:grid;gap:var(--s6)}
+@media(min-width:900px){.contact-grid{grid-template-columns:1.2fr .8fr}}
+form{display:grid;gap:var(--s4);background:var(--surface);padding:var(--s6);border-radius:var(--r-lg)}
+.row2{display:grid;gap:var(--s4)}
+@media(min-width:620px){.row2{grid-template-columns:1fr 1fr}}
+.field{display:grid;gap:.35rem;min-width:0}
+.field label{font-weight:600;font-size:.92rem}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;color:var(--text);background:var(--bg);border:1.5px solid var(--line);border-radius:var(--r-sm);padding:.75rem .9rem;width:100%}
+.field textarea{min-height:140px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--mint);box-shadow:0 0 0 4px color-mix(in srgb,var(--mint) 30%,transparent)}
+.field .err{font-size:.85rem;color:#b4523f}
+.form-status{padding:var(--s4);border-radius:var(--r-sm);background:var(--surface-2);font-size:.95rem;display:grid;gap:var(--s3)}
+.direct{display:grid;gap:var(--s3);align-content:start;position:relative}
+.card-line{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding:var(--s4) var(--s5);border-radius:var(--r-md);background:var(--surface);flex-wrap:wrap}
+.card-line .k{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.card-line .val{font-weight:600;font-size:1.05rem;user-select:all;overflow-wrap:anywhere}
+.card-line > div{display:grid;min-width:0}
+.copy{font:600 .85rem var(--f-body);border:0;border-radius:999px;padding:.45rem .85rem;background:var(--surface-2);color:var(--text);cursor:pointer;text-decoration:none}
+.direct-art{position:relative;height:150px;margin-top:var(--s4)}
+.direct-art .brush{position:absolute;left:30%;top:0;width:58px;--rot:-18deg;transform:rotate(-18deg)}
+.direct-art .sticker{right:10%;top:20px;--rot:9deg}
+
+/* Next / footer */
+.next{margin-top:var(--s8);display:flex;justify-content:space-between;align-items:center;gap:var(--s4);flex-wrap:wrap;padding-top:var(--s5);border-top:1.5px solid var(--line);text-decoration:none}
+.next strong{font-family:var(--f-display);font-weight:650;font-size:clamp(1.5rem,3.5vw,2.2rem);letter-spacing:-.02em;transition:color .2s}
+.next:hover strong{color:var(--mint-ink)}
+.photo .next{border-top-color:rgba(255,255,255,.15)}
+.photo .next strong{color:#fff}.photo .next:hover strong{color:var(--mint)}
+.foot{background:var(--surface);padding-block:var(--s7) var(--s5);margin-top:0}
+.foot-grid{display:grid;gap:var(--s6)}
+@media(min-width:800px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.foot-mark{font-family:var(--f-display);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.04em;line-height:.95}
+.foot-mark span{color:var(--sage);display:block}
+.foot h4{font-family:var(--f-mono);font-weight:500;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:var(--s3)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
+.foot ul a{text-decoration:none;font-weight:500}
+.foot ul a:hover{color:var(--mint-ink)}
+.foot-bottom{margin-top:var(--s7);padding-top:var(--s4);border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s3);font-size:.88rem;color:var(--muted)}
+.foot-bottom button{all:unset;cursor:pointer;font-weight:600;color:var(--text)}
+.foot-bottom button:focus-visible{outline:3px solid var(--mint);outline-offset:3px;border-radius:6px}
+
+/* Pages */
+.view.entering{animation:enter .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.view.entering{animation:none}}
+</style>
+
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<!-- Filtre et objets en pâte à modeler : chaque pièce reçoit son propre relief -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="clay" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.6" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="3.5" specularConstant=".5" specularExponent="18" lighting-color="#ffffff" result="spec">
+        <feDistantLight azimuth="225" elevation="40"/>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in" result="specIn"/>
+      <feOffset in="blur" dx="-2.5" dy="-3.5" result="off"/>
+      <feComposite in="SourceAlpha" in2="off" operator="out" result="rim"/>
+      <feGaussianBlur in="rim" stdDeviation="1.4" result="rimBlur"/>
+      <feFlood flood-color="#10140f" flood-opacity=".3"/>
+      <feComposite in2="rimBlur" operator="in" result="shade"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 -.2" result="grain"/>
+      <feComposite in="grain" in2="SourceAlpha" operator="in" result="grainIn"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="shade"/><feMergeNode in="grainIn"/><feMergeNode in="specIn"/></feMerge>
+    </filter>
+  </defs>
+
+  <symbol id="o-laptop" viewBox="0 0 220 160">
+    <rect filter="url(#clay)" class="c-ink" x="30" y="12" width="160" height="110" rx="16"/>
+    <rect filter="url(#clay)" class="c-mint" x="42" y="24" width="136" height="84" rx="9"/>
+    <rect filter="url(#clay)" class="c-foam" x="54" y="35" width="52" height="62" rx="8"/>
+    <circle filter="url(#clay)" class="c-ink" cx="67" cy="48" r="6"/>
+    <rect filter="url(#clay)" class="c-sage" x="60" y="62" width="40" height="22" rx="5"/>
+    <rect filter="url(#clay)" class="c-white" x="116" y="38" width="50" height="10" rx="5"/>
+    <rect filter="url(#clay)" class="c-white" x="116" y="55" width="36" height="10" rx="5"/>
+    <rect filter="url(#clay)" class="c-foam" x="116" y="72" width="50" height="24" rx="7"/>
+    <rect filter="url(#clay)" class="c-sage" x="8" y="120" width="204" height="25" rx="12.5"/>
+    <rect filter="url(#clay)" class="c-deep" x="88" y="121" width="44" height="9" rx="4.5"/>
+  </symbol>
+
+  <symbol id="o-brush" viewBox="0 0 80 220">
+    <rect filter="url(#clay)" class="c-ink" x="30" y="88" width="20" height="126" rx="10"/>
+    <rect filter="url(#clay)" class="c-foam" x="24" y="64" width="32" height="32" rx="8"/>
+    <path filter="url(#clay)" class="c-mint" d="M26 70 C 21 42, 31 15, 40 4 C 49 15, 59 42, 54 70 Z"/>
+    <path filter="url(#clay)" class="c-sage" d="M33 32 C 35 22, 38 13, 40 9 C 42 13, 45 22, 47 32 C 44 35, 36 35, 33 32 Z"/>
+  </symbol>
+
+  <symbol id="o-watch" viewBox="0 0 140 200">
+    <rect filter="url(#clay)" class="c-sage" x="46" y="4" width="48" height="64" rx="16"/>
+    <rect filter="url(#clay)" class="c-sage" x="46" y="132" width="48" height="64" rx="16"/>
+    <rect filter="url(#clay)" class="c-deep" x="112" y="90" width="13" height="20" rx="5"/>
+    <circle filter="url(#clay)" class="c-ink" cx="70" cy="100" r="48"/>
+    <circle filter="url(#clay)" class="c-white" cx="70" cy="100" r="37"/>
+    <circle filter="url(#clay)" class="c-mint" cx="70" cy="71" r="4.5"/><circle filter="url(#clay)" class="c-mint" cx="99" cy="100" r="4.5"/><circle filter="url(#clay)" class="c-mint" cx="70" cy="129" r="4.5"/><circle filter="url(#clay)" class="c-mint" cx="41" cy="100" r="4.5"/>
+    <rect filter="url(#clay)" class="c-ink" x="66" y="76" width="8" height="28" rx="4"/>
+    <rect filter="url(#clay)" class="c-ink" x="66" y="96" width="27" height="8" rx="4" transform="rotate(28 70 100)"/>
+    <circle filter="url(#clay)" class="c-mint" cx="70" cy="100" r="6.5"/>
+  </symbol>
+
+  <!-- Appareil photo reflex modelé -->
+  <symbol id="o-camera" viewBox="0 0 250 190">
+    <rect filter="url(#clay)" class="c-deep" x="4" y="76" width="18" height="26" rx="8"/>
+    <rect filter="url(#clay)" class="c-deep" x="228" y="76" width="18" height="26" rx="8"/>
+    <path filter="url(#clay)" class="c-sage" d="M90 58 L99 27 C 101 19, 107 15, 115 15 L 137 15 C 145 15, 151 19, 153 27 L 162 58 Z"/>
+    <rect filter="url(#clay)" class="c-foam" x="108" y="26" width="36" height="13" rx="6.5"/>
+    <rect filter="url(#clay)" class="c-deep" x="176" y="34" width="38" height="20" rx="8"/>
+    <ellipse filter="url(#clay)" class="c-mint" cx="195" cy="34" rx="17" ry="8"/>
+    <rect filter="url(#clay)" class="c-deep" x="38" y="38" width="32" height="18" rx="8"/>
+    <path filter="url(#clay)" class="c-white" d="M48 51 C 26 51, 16 62, 16 82 L 16 146 C 16 164, 28 175, 48 175 L 203 176 C 223 176, 234 165, 234 146 L 234 84 C 234 62, 224 51, 202 51 Z"/>
+    <rect filter="url(#clay)" class="c-sage" x="16" y="86" width="218" height="58"/>
+    <rect filter="url(#clay)" class="c-mint" x="26" y="64" width="38" height="100" rx="18"/>
+    <rect filter="url(#clay)" class="c-ink" x="180" y="64" width="38" height="15" rx="7.5"/>
+    <circle filter="url(#clay)" class="c-white" cx="138" cy="114" r="57"/>
+    <circle class="k-deep" cx="138" cy="114" r="51" stroke-width="7" stroke-dasharray="3.2 4.4"/>
+    <circle filter="url(#clay)" class="c-ink" cx="138" cy="114" r="43"/>
+    <circle filter="url(#clay)" class="c-deep" cx="138" cy="114" r="32"/>
+    <circle filter="url(#clay)" class="c-mint" cx="138" cy="114" r="23"/>
+    <circle filter="url(#clay)" class="c-ink" cx="138" cy="114" r="10"/>
+    <ellipse filter="url(#clay)" class="c-white" cx="127" cy="102" rx="8" ry="5" transform="rotate(-35 127 102)"/>
+    <circle filter="url(#clay)" class="c-white" cx="150" cy="126" r="3"/>
+    <circle filter="url(#clay)" class="c-mint" cx="210" cy="158" r="6"/>
+  </symbol>
+
+  <symbol id="o-ball" viewBox="0 0 160 160">
+    <clipPath id="ballclip"><circle cx="80" cy="80" r="64"/></clipPath>
+    <circle filter="url(#clay)" class="c-white" cx="80" cy="80" r="64"/>
+    <g clip-path="url(#ballclip)"><g filter="url(#clay)" class="ball-patches"></g></g>
+  </symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil"><span class="brand-dot" aria-hidden="true"></span>Pierre Desgenetez</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#apropos">À propos</a>
+      <div class="nav-group" role="group" aria-label="Communication">
+        <span class="ng-label" aria-hidden="true">Communication</span>
+        <a href="#projets">Projets</a>
+        <a href="#methode">Ma méthode</a>
+      </div>
+      <a href="#photographie">Photographie</a>
+      <a class="cta" href="#contact">Me contacter</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ ACCUEIL ============ -->
+<section class="view hero" data-view="accueil" data-title="Pierre Desgenetez">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="status"><i aria-hidden="true"></i>Disponible en freelance</span>
+        <h1>Pierre<span>Desgenetez</span></h1>
+        <p class="lede">Chargé de communication et photographe. Je construis la stratégie, la charte et les contenus de vos réseaux sociaux, puis je les <span class="scribble">tiens dans la durée</span>.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projets">Voir mes projets</a>
+          <a class="btn btn-ghost" href="#photographie">Voir mes photos</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-blob"></div>
+        <svg class="clay laptop float squish" viewBox="0 0 220 160"><use href="#o-laptop"/></svg>
+        <svg class="clay watch float d2 squish" viewBox="0 0 140 200"><use href="#o-watch"/></svg>
+        <svg class="clay brush float d3 squish" viewBox="0 0 80 220"><use href="#o-brush"/></svg>
+        <div class="sticker">Basé à<b>Paris</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-band"><div class="marquee-track">
+      <span>Stratégie de communication</span><span>Charte graphique</span><span>Réseaux sociaux</span><span>Création de visuels</span><span>Photographie</span><span>Événementiel</span><span>Suite Adobe</span>
+      <span>Stratégie de communication</span><span>Charte graphique</span><span>Réseaux sociaux</span><span>Création de visuels</span><span>Photographie</span><span>Événementiel</span><span>Suite Adobe</span>
+    </div></div>
+  </div>
+
+  <div class="wrap">
+    <div class="refs">
+      <span class="eyebrow dot">Ils m'ont fait confiance</span>
+      <div class="logos">
+        <a class="logo-link" href="#sam"><span class="logo-tile"><img src="logos/sam.webp" alt="Logo du SA Mérignac Football"></span><span><strong>SA Mérignac Football</strong><small>Football · 2 saisons</small></span><span class="arr" aria-hidden="true">→</span></a>
+        <a class="logo-link" href="#caisse-epargne"><span class="logo-tile"><img src="logos/ce.webp" alt="Logo de la Caisse d'Epargne"></span><span><strong>Caisse d'Epargne</strong><small>Banque · 2025</small></span><span class="arr" aria-hidden="true">→</span></a>
+        <a class="logo-link" href="#racing"><span class="logo-tile"><img src="logos/rcf.webp" alt="Logo du Racing Club de France"></span><span><strong>Racing Club de France</strong><small>Omnisports · En cours</small></span><span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <div class="figures">
+      <div><b>3</b><span>structures accompagnées</span></div>
+      <div><b>5</b><span>réseaux sociaux gérés au quotidien</span></div>
+      <div><b>2</b><span>langues de travail : français et anglais</span></div>
+    </div>
+
+    <div class="teasers">
+      <a class="teaser" href="#projets"><span class="eyebrow">Communication</span><strong>Mes projets</strong><span>Deux clubs sportifs et une banque régionale.</span><span class="go">Voir les projets →</span><svg class="clay mini" viewBox="0 0 220 160" aria-hidden="true"><use href="#o-laptop"/></svg></a>
+      <a class="teaser" href="#methode"><span class="eyebrow">Communication</span><strong>Ma méthode</strong><span>Stratégie, charte graphique et réseaux sociaux, étape par étape.</span><span class="go">Découvrir ma méthode →</span><svg class="clay mini" viewBox="0 0 140 200" aria-hidden="true" style="width:58px"><use href="#o-watch"/></svg></a>
+      <a class="teaser" href="#photographie"><span class="eyebrow">Photographie</span><strong>Mes séries</strong><span>Sport, événements et photo produit.</span><span class="go">Voir les photos →</span><svg class="clay mini" viewBox="0 0 250 190" aria-hidden="true"><use href="#o-camera"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section class="view sec about" data-view="apropos" data-title="À propos · Pierre Desgenetez" hidden>
+  <div class="deco-blob" style="width:420px;height:380px;right:-160px;top:40px"></div>
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow dot">À propos</span>
+        <h2 style="margin-block:var(--s4) var(--s5)">Pierre, <span id="age">23</span> ans, communicant et <span class="scribble">sportif</span></h2>
+        <div class="about-text">
+          <p>Titulaire d'un master en communication, j'ai vécu à Caen, Nantes et Bordeaux avant de m'installer à Paris. Le sport m'accompagne partout : j'ai longtemps joué au football, et aujourd'hui je cours en trail.</p>
+          <p>Ce que j'aime dans la communication, c'est accompagner une marque et apprendre à chaque projet. Chaque client m'ouvre un sujet que je ne connaissais pas, et c'est ce qui me fait avancer.</p>
+        </div>
+        <div class="route">
+          <span class="eyebrow">Mon parcours, version trail</span>
+          <svg viewBox="0 0 640 190" role="img" aria-label="Parcours : Caen, Nantes, Bordeaux, puis Paris aujourd'hui">
+            <path class="r-fill" d="M40 120 C 90 120, 110 78, 160 82 S 230 125, 280 112 S 360 50, 410 62 S 480 110, 520 92 S 580 40, 600 38 L 600 150 L 40 150 Z"/>
+            <path class="r-line" d="M40 120 C 90 120, 110 78, 160 82 S 230 125, 280 112 S 360 50, 410 62 S 480 110, 520 92 S 580 40, 600 38"/>
+            <circle class="r-pt" cx="40" cy="120" r="9"/><circle class="r-pt" cx="220" cy="106" r="9"/><circle class="r-pt" cx="410" cy="62" r="9"/><circle class="r-pt now" cx="600" cy="38" r="11"/>
+            <line class="r-pole" x1="600" y1="27" x2="600" y2="0"/><path class="r-flag" d="M601 1 L 628 8 L 601 16 Z"/>
+            <text class="r-lbl" x="40" y="178" text-anchor="start">Caen</text>
+            <text class="r-lbl" x="220" y="178" text-anchor="middle">Nantes</text>
+            <text class="r-lbl" x="410" y="178" text-anchor="middle">Bordeaux</text>
+            <text class="r-lbl" x="604" y="178" text-anchor="end">Paris</text>
+            <text class="r-sub" x="530" y="22" text-anchor="end">Aujourd'hui</text>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <div class="about-art">
+          <div class="sticker foam">Coureur de<b>trail</b></div>
+          <svg class="clay ball float squish" viewBox="0 0 160 160" aria-hidden="true"><use href="#o-ball"/></svg>
+        </div>
+        <dl class="facts">
+          <div><dt>Formation</dt><dd>Master en communication</dd></div>
+          <div><dt>Basé à</dt><dd>Paris, missions à distance partout en France</dd></div>
+          <div><dt>Langues</dt><dd>Français, anglais (niveau B1)</dd></div>
+          <div><dt>Outils</dt><dd>Suite Adobe, réseaux sociaux et leurs outils de suivi</dd></div>
+          <div><dt>Sport</dt><dd>Football pendant des années, trail aujourd'hui</dd></div>
+        </dl>
+      </div>
+    </div>
+    <a class="next" href="#projets"><span class="eyebrow">Page suivante</span><strong>Découvrir mes projets →</strong></a>
+  </div>
+</section>
+
+<!-- ============ PROJETS ============ -->
+<section class="view sec" data-view="projets" data-title="Projets · Pierre Desgenetez" hidden>
+  <div class="deco-blob" style="width:360px;height:320px;left:-180px;top:180px"></div>
+  <div class="wrap">
+    <div class="comm-switch">
+      <span class="eyebrow dot">Communication</span>
+      <div class="seg"><a href="#projets">Projets</a><a href="#methode">Ma méthode</a></div>
+    </div>
+    <div class="sec-head">
+      <h2>Trois terrains, une <span class="scribble">même méthode</span></h2>
+      <p class="lede">Un club de football, une banque régionale, un club omnisports historique. Trois univers où j'ai posé une stratégie et je l'ai tenue.</p>
+    </div>
+    <div class="proj-cards">
+      <a class="proj-card" href="#sam"><span class="logo-tile"><img src="logos/sam.webp" alt=""></span><span class="eyebrow">Football · 2 saisons</span><h3>SA Mérignac Football</h3><p>De l'expérimentation à une identité structurée, et l'organisation d'un 32e de finale de Coupe de France face à un club de Ligue 2.</p><span class="go">Voir le projet →</span></a>
+      <a class="proj-card" href="#caisse-epargne"><span class="logo-tile"><img src="logos/ce.webp" alt=""></span><span class="eyebrow">Banque · 2025</span><h3>Caisse d'Epargne</h3><p>Communication institutionnelle au siège régional de Bordeaux : supports, audiovisuel et campagnes.</p><span class="go">Voir le projet →</span></a>
+      <a class="proj-card" href="#racing"><span class="logo-tile"><img src="logos/rcf.webp" alt=""></span><span class="eyebrow">Omnisports · En cours</span><h3>Racing Club de France</h3><p>Réseaux sociaux, communication interne et couverture des événements du club.</p><span class="go">Voir le projet →</span></a>
+    </div>
+    <a class="next" href="#methode"><span class="eyebrow">Page suivante</span><strong>Ma méthode →</strong></a>
+  </div>
+</section>
+
+<!-- SAM -->
+<section class="view sec" data-view="sam" data-title="SA Mérignac Football · Pierre Desgenetez" hidden>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="#projets">Communication</a><span aria-hidden="true">/</span><a href="#projets">Projets</a><span aria-hidden="true">/</span><span>SA Mérignac Football</span></nav>
+    <div class="panel">
+      <div class="p-intro">
+        <div style="display:grid;gap:var(--s4);align-content:start">
+          <span class="logo-tile"><img src="logos/sam.webp" alt="Logo du SA Mérignac Football"></span>
+          <span class="eyebrow">Club de football · Communication globale</span>
+          <h3>SA Mérignac Football</h3>
+          <p class="lede">Deux saisons pour passer de l'expérimentation à une identité structurée, appliquée sur tous les supports du club.</p>
+        </div>
+        <dl class="p-meta">
+          <div class="meta-row"><dt>Rôle</dt><dd>Chargé de communication en alternance</dd></div>
+          <div class="meta-row"><dt>Durée</dt><dd>2 saisons</dd></div>
+          <div class="meta-row"><dt>Réseaux</dt><dd>Instagram, Facebook, TikTok, YouTube, LinkedIn</dd></div>
+          <div class="meta-row"><dt>Print</dt><dd>Affichage au stade du Jard</dd></div>
+        </dl>
+      </div>
+
+      <div class="bilan">
+        <span class="eyebrow dot">Bilan sur deux saisons</span>
+        <div class="kpis">
+          <div class="kpi done"><span class="v">+79 %</span><span class="l">d'abonnés sur Instagram</span><span class="from">4 800 → 8 600</span></div>
+          <div class="kpi done"><span class="v">+69 %</span><span class="l">d'abonnés sur Facebook</span><span class="from">5 100 → 8 600</span></div>
+          <div class="kpi done"><span class="v">≈ 8 %</span><span class="l">d'engagement moyen sur Instagram</span><span class="from">Stable sur les deux saisons</span></div>
+          <div class="kpi done"><span class="v">≈ 650</span><span class="l">publications par réseau</span><span class="from">Sur Instagram et Facebook, en deux saisons</span></div>
+          <div class="kpi done"><span class="v">+1,15 M</span><span class="l">de vues sur les réels Instagram</span><span class="from">Cumul sur deux saisons</span></div>
+          <div class="kpi done"><span class="v">+2,4 M</span><span class="l">de vues sur TikTok</span><span class="from">Cumul sur deux saisons</span></div>
+        </div>
+      </div>
+
+      <div class="subtabs" role="tablist" aria-label="Étapes du projet SA Mérignac">
+        <button class="subtab" role="tab" id="st-s1" aria-controls="sp-s1" aria-selected="true">Saison 1 · Expérimenter</button>
+        <button class="subtab" role="tab" id="st-s2" aria-controls="sp-s2" aria-selected="false">Saison 2 · Structurer</button>
+        <button class="subtab" role="tab" id="st-cdf" aria-controls="sp-cdf" aria-selected="false">32e de finale de Coupe de France</button>
+      </div>
+
+      <div class="sub" role="tabpanel" id="sp-s1" aria-labelledby="st-s1">
+        <div class="cdf-intro">
+          <p class="lede">Le club venait de recruter deux alternants pour ses réseaux sociaux : Hugo Kingue et moi. Notre point de départ était simple : le SAM jouait au plus haut niveau amateur, mais sa communication n'était pas encore à la hauteur de ses résultats sportifs. Il fallait la construire, puis vérifier qu'elle plaisait vraiment.</p>
+        </div>
+
+        <h4 class="cdf-title">Le diagnostic de départ</h4>
+        <div class="blocks">
+          <div class="block focus"><h4>Une force sportive à mettre en lumière</h4><p>Seul club amateur de Nouvelle-Aquitaine avec des U17 et des U19 en championnat national, des équipes jeunes au meilleur niveau régional et des anciens joueurs passés chez les pros. La matière existait, il fallait la raconter.</p></div>
+          <div class="block"><h4>Des voisins mieux armés</h4><p>J'ai comparé le SAM aux deux clubs les plus proches en taille et en niveau. Ils avaient plus de partenaires, un site plus vivant ou une boutique en ligne. La communication devenait un levier pour garder notre place face à eux.</p></div>
+          <div class="block"><h4>Une communauté à rapprocher</h4><p>Le vrai enjeu du club : créer un lien solide entre les licenciés, les familles, les supporters et le stade du Jard.</p></div>
+          <div class="block"><h4>Un cadre à respecter</h4><p>Les affiches de la plaine du Jard devaient suivre la charte de l'omnisport. Notre liberté créative se jouait donc sur les réseaux.</p></div>
+        </div>
+
+        <h4 class="cdf-title">Une semaine type, pensée pour chaque public</h4>
+        <p class="cdf-sub">Chaque jour avait son rendez-vous. Tout était publié à 18 h, l'horaire où notre communauté était la plus présente.</p>
+        <ol class="week">
+          <li><span class="ph-date">Lundi</span><h5>Les résultats</h5><p>Les éducateurs nous envoyaient les scores dans un groupe dédié. Les familles retrouvaient tout au même endroit.</p></li>
+          <li><span class="ph-date">Mardi · mercredi</span><h5>Retours en images et vie du club</h5><p>Les photos des bénévoles mettaient en valeur le week-end et les remerciaient au passage. Ces jours plus calmes servaient aussi aux stages et aux détections.</p></li>
+          <li><span class="ph-date">Jeudi</span><h5>Le planning du week-end</h5><p>Publié assez tôt pour que les familles et les spectateurs puissent s'organiser.</p></li>
+          <li><span class="ph-date">Vendredi</span><h5>Les affiches de match</h5><p>U17 et U19 nationaux, seniors masculins et féminines : donner envie de venir au stade.</p></li>
+          <li><span class="ph-date">Week-end</span><h5>Le direct</h5><p>Compositions et live des matchs, mais seulement à l'extérieur. Pour vivre un match à domicile, il faut venir au Jard.</p></li>
+        </ol>
+
+        <div class="blocks">
+          <div class="block"><h4>Éviter une communication « robot »</h4><p>Des challenges avec les joueurs (barre transversale, jongles, frappes) et des « Insides » qui suivaient une équipe pendant tout un week-end, du trajet au vestiaire. Chaque soir, une story mettait aussi un entraînement en avant.</p></div>
+          <div class="block"><h4>Un détail de format qui compte</h4><p>Chaque carrousel s'ouvrait sur la photo d'un licencié, puis le contenu arrivait au glissement. La publication était vue deux fois au lieu d'une, et les joueurs se reconnaissaient dans le fil du club.</p></div>
+          <div class="block"><h4>Un canal par cible</h4><p>Les réseaux pour la communauté, le site pour les non-licenciés (détections, stages, inscriptions) et LinkedIn pour les actions RSO et les partenaires.</p></div>
+          <div class="block"><h4>Tester, garder, abandonner</h4><p>Cette première saison nous a appris quels formats fonctionnaient, lesquels laisser de côté, et combien de temps coûtait chaque type de contenu.</p></div>
+        </div>
+
+        <h4 class="cdf-title">Quelques publications de la saison</h4>
+        <div class="ig-grid" id="ig-s1"><figure class="ig"><button type="button" data-ig="0" aria-label="Agrandir : SA Mérignac contre Stade Rennais, U19 nationaux : visuel « Face à face »"><img src="photos/sam-s1/01.webp" alt="SA Mérignac contre Stade Rennais, U19 nationaux : visuel « Face à face »" width="1206" height="1542" loading="lazy"></button><figcaption>15 déc. 2023</figcaption></figure><figure class="ig"><button type="button" data-ig="1" aria-label="Agrandir : U19 nationaux : visuel de reprise, mur d'écrans dans un entrepôt"><img src="photos/sam-s1/02.webp" alt="U19 nationaux : visuel de reprise, mur d'écrans dans un entrepôt" width="1206" height="1487" loading="lazy"></button><figcaption>16 janv. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="2" aria-label="Agrandir : Affiche du derby U17 nationaux contre les Girondins de Bordeaux"><img src="photos/sam-s1/03.webp" alt="Affiche du derby U17 nationaux contre les Girondins de Bordeaux" width="1206" height="1487" loading="lazy"></button><figcaption>19 janv. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="3" aria-label="Agrandir : Affiche SA Mérignac contre FC Nantes, U19 nationaux, sur le thème du poker"><img src="photos/sam-s1/04.webp" alt="Affiche SA Mérignac contre FC Nantes, U19 nationaux, sur le thème du poker" width="1206" height="1487" loading="lazy"></button><figcaption>26 janv. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="4" aria-label="Agrandir : Affiche SA Mérignac contre Montpellier, U17 nationaux, façon fiche de film"><img src="photos/sam-s1/05.webp" alt="Affiche SA Mérignac contre Montpellier, U17 nationaux, façon fiche de film" width="1206" height="1487" loading="lazy"></button><figcaption>6 févr. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="5" aria-label="Agrandir : Affiche SA Mérignac contre FC Lorient, U19 nationaux, en mosaïque de photos"><img src="photos/sam-s1/06.webp" alt="Affiche SA Mérignac contre FC Lorient, U19 nationaux, en mosaïque de photos" width="1206" height="1487" loading="lazy"></button><figcaption>16 févr. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="6" aria-label="Agrandir : Affiche SA Mérignac contre Châteauroux, U19 nationaux"><img src="photos/sam-s1/07.webp" alt="Affiche SA Mérignac contre Châteauroux, U19 nationaux" width="1206" height="1487" loading="lazy"></button><figcaption>15 mars 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="7" aria-label="Agrandir : Affiche SA Mérignac contre Vertou, U19 nationaux"><img src="photos/sam-s1/08.webp" alt="Affiche SA Mérignac contre Vertou, U19 nationaux" width="1206" height="1487" loading="lazy"></button><figcaption>5 avr. 2024</figcaption></figure></div>
+
+        <h4 class="cdf-title">Écouter la communauté</h4>
+        <p class="cdf-sub">Après deux mois, puis en fin de saison, nous avons interrogé joueurs, éducateurs et supporters pour savoir quoi garder et quoi changer.</p>
+        <div class="listen">
+          <div class="block focus"><h4>Ce qu'ils aimaient</h4><ul><li>La régularité des publications</li><li>Des plannings et des résultats clairs</li><li>Les lives des matchs à l'extérieur</li><li>Les vidéos tournées aux entraînements</li></ul></div>
+          <div class="block"><h4>Ce qu'ils demandaient</h4><ul><li>Plus de vidéos des U17 et des U19 nationaux</li><li>Des challenges pensés pour TikTok</li><li>Des focus sur les joueurs, pour s'identifier à une équipe</li><li>Plus de visibilité pour YouTube</li></ul></div>
+          <blockquote class="quote">« J'aime bien quand vous venez nous filmer aux entraînements et quand il y a des lives le week-end pour les équipes à l'extérieur, comme ça on connaît le résultat en direct. »<cite>Réponse au questionnaire envoyé aux licenciés</cite></blockquote>
+        </div>
+
+        <h4 class="cdf-title">Ce que j'en ai tiré</h4>
+        <p class="cdf-sub">Trois recommandations présentées à la direction du club, chacune avec un objectif, un rétroplanning, un budget et des indicateurs de suivi.</p>
+        <ol class="phases">
+          <li class="phase"><h5>Rajeunir le site internet</h5><p class="ph-why">Le site, ouvert à tous en permanence, était la porte d'entrée des futurs licenciés.</p><ul><li>Des articles réguliers et des interviews d'éducateurs et de joueurs</li><li>Des retours en images plus complets que sur les réseaux</li><li>Un site entièrement remis à jour pour la saison suivante</li></ul></li>
+          <li class="phase"><h5>Relancer YouTube</h5><p class="ph-why">Les championnats nationaux U17 et U19 intéressent des passionnés dans toute la France.</p><ul><li>Des résumés courts des matchs nationaux</li><li>Un Inside régulier, et systématique pour les grands matchs comme les derbys</li><li>Une caméra dédiée, pour proposer de la qualité en plus de la quantité</li></ul></li>
+          <li class="phase"><h5>Habiller la plaine du Jard</h5><p class="ph-why">Des joueurs fiers de leur club, et des spectateurs qui ont envie de rester après le match.</p><ul><li>Le logo du club visible à l'entrée et dans les vestiaires</li><li>Un mur des partenaires dans le foyer</li><li>Des travaux réalisés l'été avec les joueurs disponibles</li></ul></li>
+        </ol>
+        <p class="cdf-sub">Ces enseignements ont servi de base à la direction artistique et à la charte que j'ai créées seul la saison suivante.</p>
+
+
+      </div>
+
+      <div class="sub" role="tabpanel" id="sp-s2" aria-labelledby="st-s2" hidden>
+        <div class="cdf-intro">
+          <p class="lede">Pour la deuxième saison, j'étais seul aux commandes. Deux défis m'attendaient : tenir le même rythme de publication sans binôme, et garder des réseaux vivants et positifs pendant une saison sportive difficile.</p>
+        </div>
+
+        <h4 class="cdf-title">Le contexte</h4>
+        <div class="blocks">
+          <div class="block focus"><h4>Une communauté déjà au rendez-vous</h4><p>Le travail de la première saison avait installé des habitudes : les licenciés et les supporters suivaient le club. Il fallait continuer à les informer, mais aussi continuer à les surprendre.</p></div>
+          <div class="block"><h4>Une visibilité nationale à défendre</h4><p>Les U17 et les U19 nationaux restaient une vitrine en France. Mais un club voisin brillait lui aussi en U17 nationaux et captait une partie de l'attention.</p></div>
+          <div class="block"><h4>Des résultats qui ne suivent pas</h4><p>Les U17 et les U19 sont descendus de leur championnat national, et les seniors ont manqué la montée en National 3 lors de la dernière journée.</p></div>
+          <div class="block"><h4>Seul pour tout produire</h4><p>Réseaux sociaux, affiches, vie du club : sans binôme, la question du temps de production devenait centrale.</p></div>
+        </div>
+
+        <h4 class="cdf-title">Mes choix pour la saison</h4>
+        <ol class="phases">
+          <li class="phase">
+            <h5>Une charte simple, tenue toute l'année</h5>
+            <p class="ph-why">Une identité reconnaissable, et des visuels plus rapides à produire seul.</p>
+            <ul>
+              <li>Une direction artistique et une charte graphique plus épurées pour les posts</li>
+              <li>La même semaine type que la saison précédente : seul le cadre graphique change</li>
+              <li>Des gabarits prêts à l'emploi pour les résultats, les plannings et les affiches</li>
+            </ul>
+          </li>
+          <li class="phase">
+            <h5>Habiller le stade du Jard</h5>
+            <p class="ph-why">Une des recommandations de ma première saison, devenue réalité.</p>
+            <ul>
+              <li>Deux affiches au Jard chaque week-end de match à domicile, toute la saison</li>
+              <li>Plus d'affichage pour les stages et la vie du club</li>
+              <li>Un stade qui ressemble davantage au club, pour les joueurs comme pour les spectateurs</li>
+            </ul>
+          </li>
+          <li class="phase">
+            <h5>Garder une dynamique positive</h5>
+            <p class="ph-why">Communiquer quand les résultats ne suivent pas, sans perdre la communauté.</p>
+            <ul>
+              <li>Donner toutes les informations, sans cacher les défaites</li>
+              <li>Surprendre avec des affiches et des posts plus travaillés sur les temps forts</li>
+              <li>Faire vivre le club au-delà du score : formation, jeunes, stages et événements</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h4 class="cdf-title">Quelques publications de la saison</h4>
+        <div class="ig-grid" id="ig-s2"><figure class="ig"><button type="button" data-ig="0" aria-label="Agrandir : Affiche SA Mérignac contre Avranches, U19 nationaux, en cartes de joueurs"><img src="photos/sam-s2/01.webp" alt="Affiche SA Mérignac contre Avranches, U19 nationaux, en cartes de joueurs" width="1206" height="1487" loading="lazy"></button><figcaption>18 oct. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="1" aria-label="Agrandir : Programme du dimanche au Jard : U19, U17 et seniors R1"><img src="photos/sam-s2/02.webp" alt="Programme du dimanche au Jard : U19, U17 et seniors R1" width="1206" height="1487" loading="lazy"></button><figcaption>19 nov. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="2" aria-label="Agrandir : Affiche SA Mérignac contre Stade Rennais, U19 nationaux"><img src="photos/sam-s2/03.webp" alt="Affiche SA Mérignac contre Stade Rennais, U19 nationaux" width="1206" height="1487" loading="lazy"></button><figcaption>17 janv. 2025</figcaption></figure><figure class="ig"><button type="button" data-ig="3" aria-label="Agrandir : Affiche « Jour de coupe », seniors R1 en Coupe de Gironde"><img src="photos/sam-s2/04.webp" alt="Affiche « Jour de coupe », seniors R1 en Coupe de Gironde" width="1206" height="1487" loading="lazy"></button><figcaption>26 févr. 2025</figcaption></figure><figure class="ig"><button type="button" data-ig="4" aria-label="Agrandir : Visuel classement de fin de saison, seniors R1"><img src="photos/sam-s2/05.webp" alt="Visuel classement de fin de saison, seniors R1" width="1206" height="1487" loading="lazy"></button><figcaption>2 avr. 2025</figcaption></figure><figure class="ig"><button type="button" data-ig="5" aria-label="Agrandir : Affiche « Match au Jard » contre le Stade Brestois, U19 nationaux"><img src="photos/sam-s2/06.webp" alt="Affiche « Match au Jard » contre le Stade Brestois, U19 nationaux" width="1206" height="1542" loading="lazy"></button><figcaption>11 avr. 2025</figcaption></figure><figure class="ig"><button type="button" data-ig="6" aria-label="Agrandir : Annonce du tournoi international SAM Elite au stade du Jard"><img src="photos/sam-s2/07.webp" alt="Annonce du tournoi international SAM Elite au stade du Jard" width="1206" height="1727" loading="lazy"></button><figcaption>26 mai 2025</figcaption></figure><figure class="ig"><button type="button" data-ig="7" aria-label="Agrandir : Visuel « Il reste samiste », annonce des joueurs qui restent"><img src="photos/sam-s2/08.webp" alt="Visuel « Il reste samiste », annonce des joueurs qui restent" width="1206" height="1536" loading="lazy"></button><figcaption>24 juin 2025</figcaption></figure></div>
+
+        <div class="block recul">
+          <h4>Ce que cette saison m'a appris</h4>
+          <p>Une charte bien pensée, c'est du temps gagné chaque semaine et une cohérence que la communauté remarque. Et la communication d'un club ne se juge pas seulement les saisons où tout va bien : c'est quand les résultats manquent qu'il faut le plus faire vivre le lien avec les supporters.</p>
+        </div>
+
+        <div class="shots"><div class="shot wide">Planche de la charte graphique</div><div class="shot">Affiche R1</div><div class="shot">Affiche U19</div></div>
+      </div>
+
+      <div class="sub" role="tabpanel" id="sp-cdf" aria-labelledby="st-cdf" hidden>
+        <div class="cdf-intro">
+          <p class="lede">Un club amateur de Régional 1 qui reçoit le Stade Lavallois, pensionnaire de Ligue 2, avec le match retransmis à la télévision. J'avais trois semaines pour remplir le stade, mobiliser toute la communauté du club et accueillir la presse dans les règles de la Fédération.</p>
+          <div class="cdf-facts">
+            <div><b>20</b><span>jours entre la qualification et le coup d'envoi</span></div>
+            <div><b>R1 · L2</b><span>quatre divisions d'écart entre les deux clubs</span></div>
+            <div><b>TV</b><span>match diffusé en direct, avec ses contraintes de droits</span></div>
+          </div>
+        </div>
+
+        <h4 class="cdf-title">La campagne, en trois temps</h4>
+        <p class="cdf-sub">Chaque publication avait un rôle précis dans la montée en puissance. Le digital et le terrain avançaient ensemble.</p>
+        <ol class="phases">
+          <li class="phase">
+            <span class="ph-date">30 nov. → 5 déc.</span>
+            <h5>Célébrer et créer l'attente</h5>
+            <p class="ph-why">Avant de vendre un billet, il fallait que les supporters réalisent qu'un moment historique arrivait.</p>
+            <ul>
+              <li><strong>Post victoire et retour en images</strong> dès le soir de la qualification, pour capter l'émotion à chaud.</li>
+              <li><strong>Post « tirage au sort »</strong> avec les adversaires possibles et nos 28 % de chances de tirer une Ligue 1 : le suspense devient un contenu.</li>
+              <li><strong>Vidéo de célébration des joueurs</strong>, pour humaniser l'équipe avant de l'afficher sur les affiches.</li>
+            </ul>
+          </li>
+          <li class="phase">
+            <span class="ph-date">6 → 15 déc.</span>
+            <h5>Remplir le stade</h5>
+            <p class="ph-why">Le cœur de l'objectif : convertir l'enthousiasme en billets vendus, en ligne comme au guichet.</p>
+            <ul>
+              <li><strong>Ouverture de la billetterie en ligne</strong> annoncée le jour même où les affiches sortent dans la ville, avec l'appui de la mairie de Mérignac.</li>
+              <li><strong>Jeu concours à 5 places</strong> porté par un joueur du club, également influenceur, pour toucher un public au-delà des abonnés : 814 likes et 738 commentaires.</li>
+              <li><strong>Flyers distribués à tous les licenciés</strong> et annonce des places au guichet, pour ne laisser personne de côté.</li>
+            </ul>
+          </li>
+          <li class="phase">
+            <span class="ph-date">16 → 20 déc.</span>
+            <h5>Faire monter la tension</h5>
+            <p class="ph-why">La dernière semaine sert à garder l'élan jusqu'au coup d'envoi et à donner une raison de venir tôt.</p>
+            <ul>
+              <li><strong>« Semaine de Coupe » et réels tournés avec la FFF</strong>, qui suivait notre parcours de Petit Poucet.</li>
+              <li><strong>Vidéo « émotion » à J-1</strong>, tombola et vente d'écharpes solidaires : 1 € reversé pour chaque écharpe aux habitants de Mayotte après le cyclone Chido.</li>
+              <li><strong>Annonce du groupe le jour J</strong> et habillage du stade selon la direction artistique imposée par la Fédération.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h4 class="cdf-title">Quelques publications du parcours</h4>
+        <div class="ig-grid ig-3" id="ig-cdf"><figure class="ig"><button type="button" data-ig="0" aria-label="Agrandir : Affiche du 6e tour de Coupe de France contre la Jeunesse Villenavaise, mur de télévisions"><img src="photos/sam-cdf/01.webp" alt="Affiche du 6e tour de Coupe de France contre la Jeunesse Villenavaise, mur de télévisions" width="1206" height="1487" loading="lazy"></button><figcaption>25 oct. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="1" aria-label="Agrandir : Affiche « En route pour l'histoire », 7e tour à Saint-Philbert"><img src="photos/sam-cdf/02.webp" alt="Affiche « En route pour l'histoire », 7e tour à Saint-Philbert" width="1206" height="1487" loading="lazy"></button><figcaption>15 nov. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="2" aria-label="Agrandir : Visuel du tirage au sort des 32es de finale, 28 % de chances de tirer une Ligue 1"><img src="photos/sam-cdf/03.webp" alt="Visuel du tirage au sort des 32es de finale, 28 % de chances de tirer une Ligue 1" width="1206" height="1487" loading="lazy"></button><figcaption>2 déc. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="3" aria-label="Agrandir : Affiche « Billetterie ouverte » pour SA Mérignac contre Stade Lavallois"><img src="photos/sam-cdf/04.webp" alt="Affiche « Billetterie ouverte » pour SA Mérignac contre Stade Lavallois" width="1206" height="1487" loading="lazy"></button><figcaption>5 déc. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="4" aria-label="Agrandir : Jeu concours pour gagner 5 places pour SAM-Laval"><img src="photos/sam-cdf/05.webp" alt="Jeu concours pour gagner 5 places pour SAM-Laval" width="1206" height="1542" loading="lazy"></button><figcaption>10 déc. 2024</figcaption></figure><figure class="ig"><button type="button" data-ig="5" aria-label="Agrandir : Visuel « Merci » après le match contre le Stade Lavallois"><img src="photos/sam-cdf/06.webp" alt="Visuel « Merci » après le match contre le Stade Lavallois" width="1206" height="1487" loading="lazy"></button><figcaption>23 déc. 2024</figcaption></figure></div>
+
+        <div class="blocks">
+          <div class="block focus">
+            <h4>Le jour J</h4>
+            <ul>
+              <li>Briefing des journalistes à 18 h et des huit photographes à 19 h 30, coordonnés en amont dans un groupe dédié.</li>
+              <li>Stories et publications en direct pour ceux qui n'étaient pas au stade, sans montrer les buts à cause des droits télé.</li>
+              <li>Contenu tourné dans le vestiaire avant l'entrée des joueurs.</li>
+              <li>Organisation des interviews d'après-match avec les deux entraîneurs et quatre joueurs.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h4>Trois imprévus gérés</h4>
+            <ul>
+              <li><strong>Impressions</strong> : la personne chargée des accréditations et de l'habillage des tribunes a dû s'absenter quelques jours avant. Nous avons tout repris en urgence.</li>
+              <li><strong>Composition modifiée une heure avant le match</strong> après une blessure : j'ai renoncé aux images d'échauffement pour refaire et republier les visuels.</li>
+              <li><strong>Pelouse incertaine</strong> jusqu'à quinze minutes du coup d'envoi : un circuit d'information prêt pour la presse, les speakers puis les réseaux.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cdf-results">
+          <div class="cdf-facts">
+            <div><b>3 155</b><span>spectateurs au stade</span></div>
+            <div><b>13 763 €</b><span>de billets vendus en prévente, grâce à la campagne en ligne</span></div>
+            <div><b>100 %</b><span>des journalistes et photographes ont trouvé les consignes claires et la réunion d'avant-match utile</span></div>
+          </div>
+          <blockquote class="quote">« Pierre était réactif et présent pour nous, ce qui n'est pas le cas sur tous les événements. »<cite>Réponse anonyme au questionnaire envoyé à la presse après le match</cite></blockquote>
+        </div>
+
+        <div class="block recul">
+          <h4>Avec le recul</h4>
+          <p>Deux points que je travaillerais différemment : préparer à l'avance les contenus d'après-match et les remerciements, pour prolonger l'élan dans les jours suivants, et répartir la montée en puissance plus régulièrement sur la dernière semaine.</p>
+        </div>
+
+        <span class="eyebrow dot">Les retombées</span>
+        <div class="kpis">
+          <div class="kpi done"><span class="v">36</span><span class="l">articles de presse sur le club</span><span class="from">Du 30 novembre au 23 décembre</span></div>
+          <div class="kpi done"><span class="v">+1 054</span><span class="l">abonnés sur Instagram</span><span class="from">Du 30 novembre au 23 décembre</span></div>
+          <div class="kpi done"><span class="v">512</span><span class="l">likes en moyenne par post Coupe de France</span><span class="from">24 % de plus que les autres posts</span></div>
+          <div class="kpi done"><span class="v">+245 %</span><span class="l">de visites sur le site du club</span><span class="from">En décembre, par rapport aux autres mois</span></div>
+        </div>
+      </div>
+    </div>
+    <a class="next" href="#caisse-epargne"><span class="eyebrow">Projet suivant</span><strong>Caisse d'Epargne →</strong></a>
+  </div>
+</section>
+
+<!-- Caisse d'Epargne -->
+<section class="view sec" data-view="caisse-epargne" data-title="Caisse d'Epargne · Pierre Desgenetez" hidden>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="#projets">Communication</a><span aria-hidden="true">/</span><a href="#projets">Projets</a><span aria-hidden="true">/</span><span>Caisse d'Epargne</span></nav>
+    <div class="panel">
+      <div class="p-intro">
+        <div style="display:grid;gap:var(--s4);align-content:start">
+          <span class="logo-tile"><img src="logos/ce.webp" alt="Logo de la Caisse d'Epargne"></span>
+          <span class="eyebrow">Banque régionale · Communication institutionnelle</span>
+          <h3>Caisse d'Epargne Aquitaine Poitou-Charentes</h3>
+          <p class="lede">Communiquer pour une banque régionale : des messages encadrés, des publics variés et beaucoup d'image.</p>
+        </div>
+        <dl class="p-meta">
+          <div class="meta-row"><dt>Rôle</dt><dd>Chargé de communication, CDD</dd></div>
+          <div class="meta-row"><dt>Période</dt><dd>Mars à novembre 2025</dd></div>
+          <div class="meta-row"><dt>Lieu</dt><dd>Siège régional, Bordeaux</dd></div>
+          <div class="meta-row"><dt>Équipes</dt><dd>Marketing et événementiel</dd></div>
+        </dl>
+      </div>
+      <div class="cdf-intro">
+        <p class="lede">À la Caisse d'Epargne, je ne parlais plus à des supporters mais aux clients, aux sociétaires, aux commerçants et aux associations de toute une région. Le défi : faire vivre des sujets très différents, du sport de haut niveau à l'épargne responsable, en restant fidèle à une charte de marque nationale très encadrée.</p>
+      </div>
+
+      <h4 class="cdf-title">Les sujets sur lesquels j'ai travaillé</h4>
+      <div class="blocks">
+        <div class="block focus"><h4>Le sport et la performance</h4><p>Mettre en avant les athlètes soutenus par la banque dans le cadre du Pacte de Performance : une médaille d'or en boxe, un triple podium en para natation. Des visuels à chaud, publiés dès le résultat, dans les codes graphiques de la marque.</p></div>
+        <div class="block"><h4>L'économie locale</h4><p>Promouvoir « Les Étoiles du commerce et de l'artisanat », un concours qui récompense des artisans et commerçants de chaque département, avec un partenaire local. L'enjeu : donner envie de candidater.</p></div>
+        <div class="block focus"><h4>L'épargne responsable</h4><p>Valoriser le Livret Transition Territoire, un livret 100 % régional qui finance des projets locaux de transition environnementale. Pour son premier anniversaire, un message court et direct, centré sur son impact.</p></div>
+        <div class="block"><h4>La relation avec les sociétaires</h4><p>Accompagner le lancement du Club des sociétaires, qui réunit les avantages réservés aux clients sociétaires de la banque.</p></div>
+        <div class="block"><h4>L'engagement solidaire</h4><p>Relayer le soutien de la banque à l'association Ruban Rose pendant Octobre Rose, avec un carrousel pédagogique qui explique pourquoi donner.</p></div>
+        <div class="block"><h4>Sur le terrain</h4><p>Le suivi des initiatives sportives de la banque, comme Piscine de Demain et un club sponsorisé, avec des photos, des vidéos, des interviews et des reportages.</p></div>
+      </div>
+
+      <h4 class="cdf-title">Quelques publications</h4>
+      <div class="ig-grid ig-3" id="ig-ce"><figure class="ig"><button type="button" data-ig="0" aria-label="Agrandir : Campagne « Les Étoiles du commerce et de l'artisanat 2025 », appel à candidatures"><img src="photos/ce/01.webp" alt="Campagne « Les Étoiles du commerce et de l'artisanat 2025 », appel à candidatures" width="1206" height="1788" loading="lazy"></button><figcaption>26 avr. 2025</figcaption></figure><figure class="ig"><button type="button" data-ig="1" aria-label="Agrandir : Visuel « Médaille d'or » pour un boxeur soutenu par le Pacte de Performance"><img src="photos/ce/02.webp" alt="Visuel « Médaille d'or » pour un boxeur soutenu par le Pacte de Performance" width="1206" height="1787" loading="lazy"></button><figcaption>29 avr. 2025</figcaption></figure><figure class="ig"><button type="button" data-ig="2" aria-label="Agrandir : Visuel « Le Livret Transition Territoire, c'est… », un an après le lancement"><img src="photos/ce/03.webp" alt="Visuel « Le Livret Transition Territoire, c'est… », un an après le lancement" width="1206" height="1487" loading="lazy"></button><figcaption>7 mai 2025</figcaption></figure><figure class="ig"><button type="button" data-ig="3" aria-label="Agrandir : Visuel « Triple podium » pour un nageur en para natation soutenu par la banque"><img src="photos/ce/04.webp" alt="Visuel « Triple podium » pour un nageur en para natation soutenu par la banque" width="1206" height="1788" loading="lazy"></button><figcaption>23 juin 2025</figcaption></figure><figure class="ig"><button type="button" data-ig="4" aria-label="Agrandir : Lancement du Club des sociétaires"><img src="photos/ce/05.webp" alt="Lancement du Club des sociétaires" width="1206" height="1487" loading="lazy"></button><figcaption>17 sept. 2025</figcaption></figure><figure class="ig"><button type="button" data-ig="5" aria-label="Agrandir : Carrousel « 3 bonnes raisons de soutenir l'association Ruban Rose »"><img src="photos/ce/06.webp" alt="Carrousel « 3 bonnes raisons de soutenir l'association Ruban Rose »" width="1206" height="1542" loading="lazy"></button><figcaption>30 oct. 2025</figcaption></figure></div>
+
+      <div class="blocks">
+        <div class="block"><h4>Ce que je produisais</h4><ul><li>Visuels pour les réseaux sociaux, affiches, infographies et présentations</li><li>Photos, vidéos, interviews, reportages et teasers</li><li>Participation aux campagnes internes et externes, avec les équipes marketing et événementiel</li></ul></div>
+        <div class="block recul"><h4>Ce que cette expérience m'a appris</h4><p>Travailler dans une charte nationale stricte oblige à trouver la créativité ailleurs : dans le choix du sujet, le bon moment de publication et la façon de raconter. Et un même compte peut parler à des publics très différents, à condition d'adapter le ton à chaque message.</p></div>
+      </div>
+
+    </div>
+    <a class="next" href="#racing"><span class="eyebrow">Projet suivant</span><strong>Racing Club de France →</strong></a>
+  </div>
+</section>
+
+<!-- Racing -->
+<section class="view sec" data-view="racing" data-title="Racing Club de France · Pierre Desgenetez" hidden>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="#projets">Communication</a><span aria-hidden="true">/</span><a href="#projets">Projets</a><span aria-hidden="true">/</span><span>Racing Club de France</span></nav>
+    <div class="panel">
+      <div class="p-intro">
+        <div style="display:grid;gap:var(--s4);align-content:start">
+          <span class="logo-tile"><img src="logos/rcf.webp" alt="Logo du Racing Club de France"></span>
+          <span class="eyebrow">Club omnisports · Communication globale</span>
+          <h3>Racing Club de France <span class="live">En cours</span></h3>
+          <p class="lede">Ma mission actuelle : les réseaux sociaux du club, ses événements et la communication interne, avec une nouvelle direction artistique en préparation pour la saison prochaine.</p>
+        </div>
+        <dl class="p-meta">
+          <div class="meta-row"><dt>Rôle</dt><dd>Chargé de communication</dd></div>
+          <div class="meta-row"><dt>Depuis</dt><dd>Août 2026</dd></div>
+          <div class="meta-row"><dt>Lieu</dt><dd>Paris</dd></div>
+          <div class="meta-row"><dt>Périmètre</dt><dd>Réseaux sociaux, événements, salariés</dd></div>
+        </dl>
+      </div>
+      <div class="blocks">
+        <div class="block"><h4>Réseaux sociaux</h4><p>Faire vivre toutes les sections d'un club omnisports sur un même compte, aux couleurs du club :</p><ul><li>Les résultats du week-end, toutes sections confondues</li><li>Des portraits d'athlètes en format interview</li><li>Les stages vacances et la vie des sections</li></ul></div>
+        <div class="block"><h4>Communication interne</h4><p>Les messages à destination de tous les salariés, et la communication du CSE.</p></div>
+        <div class="block focus"><h4>Événements couverts</h4><ul><li>Sortie vélo avec Bernard Hinault pour l'association Souffle d'Espoir CLC</li><li>Compétition de natation</li></ul></div>
+        <div class="block"><h4>À venir</h4><p>Une nouvelle direction artistique, lancée avec la prochaine saison pour garder une identité cohérente d'un bout à l'autre.</p></div>
+      </div>
+      <div class="newsletter">
+        <div class="nl-text">
+          <span class="eyebrow dot">Newsletter</span>
+          <h4>La Lettre Ciel et Blanc</h4>
+          <p>La newsletter du club, envoyée le 15 de chaque mois à tous les membres et adhérents. Elle rassemble en un seul rendez-vous l'actualité de toutes les sections : leurs résultats, leurs temps forts et les grandes nouvelles du club.</p>
+          <p>Dans un club omnisports, c'est le lien qui permet à chaque adhérent de suivre la vie du Racing au-delà de sa propre section.</p>
+        </div>
+        <div class="cdf-facts nl-facts">
+          <div><b>Le 15</b><span>de chaque mois, un rendez-vous fixe</span></div>
+          <div><b>≈ 7 000</b><span>membres et adhérents destinataires</span></div>
+          <div><b>≈ 70 %</b><span>de taux d'ouverture depuis mon arrivée</span></div>
+        </div>
+      </div>
+      <div class="kpis">
+        <div class="kpi done"><span class="v">38</span><span class="l">publications depuis mon arrivée</span><span class="from">Sur Instagram et Facebook</span></div>
+        <div class="kpi done"><span class="v">+190</span><span class="l">abonnés sur Instagram</span><span class="from">2 480 → 2 671</span></div>
+        <div class="kpi done"><span class="v">+8 %</span><span class="l">d'abonnés en trois mois</span><span class="from">Depuis la reprise du compte</span></div>
+      </div>
+      <h4 class="cdf-title">Quelques publications</h4>
+      <div class="ig-grid" id="ig-rcf"><figure class="ig"><button type="button" data-ig="0" aria-label="Agrandir : Résultats du week-end des sections escrime et athlétisme"><img src="photos/rcf/01.webp" alt="Résultats du week-end des sections escrime et athlétisme" width="1206" height="1517" loading="lazy"></button><figcaption>Résultats du week-end</figcaption></figure><figure class="ig"><button type="button" data-ig="1" aria-label="Agrandir : Carrousel des stages vacances, page badminton"><img src="photos/rcf/02.webp" alt="Carrousel des stages vacances, page badminton" width="1206" height="1766" loading="lazy"></button><figcaption>Stages vacances</figcaption></figure><figure class="ig"><button type="button" data-ig="2" aria-label="Agrandir : Portrait d'athlète en format interview, section athlétisme, après l'UTMB"><img src="photos/rcf/03.webp" alt="Portrait d'athlète en format interview, section athlétisme, après l'UTMB" width="1206" height="1766" loading="lazy"></button><figcaption>Portrait d'athlète · Athlétisme</figcaption></figure><figure class="ig"><button type="button" data-ig="3" aria-label="Agrandir : Portrait d'athlète en format interview, section hockey"><img src="photos/rcf/04.webp" alt="Portrait d'athlète en format interview, section hockey" width="1206" height="1766" loading="lazy"></button><figcaption>Portrait d'athlète · Hockey</figcaption></figure></div>
+      <div class="rcf-photos">
+        <div class="rcf-photos-head">
+          <span class="eyebrow dot">Photographie</span>
+          <h4>Mes photos au Racing</h4>
+          <p>Les événements du club que j'ai couverts en tant que photographe.</p>
+        </div>
+        <div class="rcf-photos-grid" id="rcf-photos"></div>
+        <a class="rcf-photos-all" href="#photographie">Voir toute la partie photographie →</a>
+      </div>
+    </div>
+    <a class="next" href="#methode"><span class="eyebrow">Page suivante</span><strong>Ma méthode →</strong></a>
+  </div>
+</section>
+
+<!-- ============ COMMENT JE TRAVAILLE ============ -->
+<section class="view sec" data-view="methode" data-title="Ma méthode · Pierre Desgenetez" hidden>
+  <div class="deco-blob" style="width:420px;height:380px;right:-200px;top:120px"></div>
+  <div class="wrap">
+    <div class="comm-switch">
+      <span class="eyebrow dot">Communication</span>
+      <div class="seg"><a href="#projets">Projets</a><a href="#methode">Ma méthode</a></div>
+    </div>
+    <div class="sec-head">
+      <h2>Une communication qui garde <span class="scribble">le cap</span></h2>
+      <p class="lede">J'accompagne les entreprises, start-up, clubs et associations sur leur communication globale, avec un cœur de métier : les réseaux sociaux, construits sur une vraie stratégie.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z"/></svg></span>
+        <span class="tag">Le cap</span>
+        <h3>Stratégie de communication</h3>
+        <p>Objectifs, publics, messages et calendrier éditorial. Un plan clair que vous et votre équipe pouvez suivre au quotidien.</p>
+      </article>
+      <article class="svc">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.5"/><rect x="13" y="4.5" width="7" height="7" rx="1.5"/><path d="M4.5 19.5 8 14l3.5 5.5z"/><path d="M14 15h6M14 19h4"/></svg></span>
+        <span class="tag">L'identité</span>
+        <h3>Charte graphique et direction artistique</h3>
+        <p>Une identité visuelle cohérente et des gabarits prêts à l'emploi, pour produire plus vite sans perdre en qualité.</p>
+      </article>
+      <article class="svc">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10 18.5h4"/><path d="m12 8.2.9 1.8 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3z"/></svg></span>
+        <span class="tag">Le quotidien</span>
+        <h3>Gestion des réseaux sociaux</h3>
+        <p>Instagram, Facebook, LinkedIn, TikTok, YouTube. Création des visuels sur la suite Adobe, publication et suivi des résultats.</p>
+      </article>
+    </div>
+    <div class="svc-note">
+      <span class="chip">Français et anglais</span>
+      <span class="chip">Suite Adobe</span>
+      <span class="chip">Print et digital</span>
+      <span class="chip">Photo et vidéo</span>
+    </div>
+
+    <div class="method">
+      <div class="method-art">
+        <svg class="clay float squish" viewBox="0 0 140 200" aria-hidden="true" style="--rot:-8deg"><use href="#o-watch"/></svg>
+        <p>Des délais tenus et un planning partagé.</p>
+      </div>
+      <div>
+        <h3 style="font-size:1.6rem;margin-bottom:var(--s4)">Ma méthode, en cinq étapes</h3>
+        <ol class="steps">
+          <li><b>01</b><strong>Écouter</strong><span>Comprendre votre marque, vos publics et vos moyens.</span></li>
+          <li><b>02</b><strong>Définir</strong><span>Poser la stratégie et la ligne éditoriale.</span></li>
+          <li><b>03</b><strong>Dessiner</strong><span>Créer la charte et les gabarits.</span></li>
+          <li><b>04</b><strong>Produire</strong><span>Réaliser et publier les contenus.</span></li>
+          <li><b>05</b><strong>Mesurer</strong><span>Faire le bilan chiffré et ajuster.</span></li>
+        </ol>
+      </div>
+    </div>
+    <a class="next" href="#photographie"><span class="eyebrow">Page suivante</span><strong>Mon travail de photographe →</strong></a>
+  </div>
+</section>
+
+<!-- ============ PHOTOGRAPHIE ============ -->
+<section class="view sec photo" data-view="photographie" data-title="Photographie · Pierre Desgenetez" hidden>
+  <div class="perf" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="photo-head">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow dot">Photographie</span>
+        <h2>Faire de vos événements des images qui restent</h2>
+        <p class="lede">Matchs, événements, produits. Chaque série garde la trace d'un moment, du premier échauffement à la dernière accolade.</p>
+      </div>
+      <svg class="clay camera float squish" viewBox="0 0 250 190" aria-hidden="true"><use href="#o-camera"/></svg>
+    </div>
+    <div class="series" id="series"></div>
+    <div class="accred">
+      <p><strong>Événement sportif, musical, séminaire ou autre ?</strong>Je suis disponible pour couvrir vos événements.</p>
+      <a class="btn btn-primary" href="#contact" data-need="Couverture photo d'un événement">Proposer un événement</a>
+    </div>
+    <a class="next" href="#contact"><span class="eyebrow">Page suivante</span><strong>Travaillons ensemble →</strong></a>
+  </div>
+  <div class="perf bottom" aria-hidden="true"></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="view sec contact" data-view="contact" data-title="Contact · Pierre Desgenetez" hidden>
+  <div class="deco-blob" style="width:380px;height:340px;left:-190px;top:60px"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow dot">Contact</span>
+      <h2>Parlons de <span class="scribble">votre projet</span></h2>
+      <p class="lede">Décrivez votre besoin en quelques lignes. Je vous réponds sous 48 heures.</p>
+    </div>
+    <div class="contact-grid">
+      <form id="form" novalidate>
+        <div class="row2">
+          <div class="field"><label for="f-name">Nom et prénom</label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name"></span></div>
+          <div class="field"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" required><span class="err" id="e-mail"></span></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-org">Entreprise ou structure</label><input id="f-org" name="org" autocomplete="organization"></div>
+          <div class="field"><label for="f-need">Votre besoin</label>
+            <select id="f-need" name="need">
+              <option>Gestion des réseaux sociaux</option>
+              <option>Stratégie de communication</option>
+              <option>Charte graphique</option>
+              <option>Couverture photo d'un événement</option>
+              <option>Autre demande</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea><span class="err" id="e-msg"></span></div>
+        <div><button class="btn btn-primary" type="submit">Envoyer ma demande</button></div>
+        <div class="form-status" id="status" hidden>
+          <p>Votre messagerie s'ouvre avec le message prêt à partir. Si rien ne s'ouvre, copiez le message et envoyez-le à pierre.desgenetez@gmail.com.</p>
+          <div><button class="copy" type="button" id="copy-msg">Copier le message</button></div>
+        </div>
+      </form>
+      <div class="direct">
+        <div class="card-line"><div><span class="k">Email</span><span class="val">pierre.desgenetez@gmail.com</span></div><button class="copy" type="button" data-copy="pierre.desgenetez@gmail.com">Copier</button></div>
+        <div class="card-line"><div><span class="k">Téléphone</span><span class="val">06 32 93 81 54</span></div><button class="copy" type="button" data-copy="0632938154">Copier</button></div>
+        <div class="card-line"><div><span class="k">LinkedIn</span><span class="val">Pierre Desgenetez</span></div><a class="copy" href="https://www.linkedin.com/in/pierre-desgenetez-3309811b6/" target="_blank" rel="noopener">Voir le profil</a></div>
+        <div class="direct-art" aria-hidden="true">
+          <svg class="clay brush float d2 squish" viewBox="0 0 80 220"><use href="#o-brush"/></svg>
+          <div class="sticker">Réponse sous<b>48 h</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-mark">Pierre<span>Desgenetez</span></p>
+        <p style="margin-top:var(--s4);color:var(--muted);max-width:36ch">Communication et photographie. Basé à Paris, disponible en freelance.</p>
+      </div>
+      <div>
+        <h4>Le site</h4>
+        <ul><li><a href="#apropos">À propos</a></li><li><a href="#projets">Projets</a></li><li><a href="#methode">Ma méthode</a></li><li><a href="#photographie">Photographie</a></li><li><a href="#contact">Me contacter</a></li></ul>
+      </div>
+      <div>
+        <h4>Me joindre</h4>
+        <ul><li>pierre.desgenetez@gmail.com</li><li>06 32 93 81 54</li><li><a href="https://www.linkedin.com/in/pierre-desgenetez-3309811b6/" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year">2026</span> Pierre Desgenetez</span><button type="button" id="to-top">Retour en haut ↑</button></div>
+  </div>
+</footer>
+
+<dialog id="gallery" aria-labelledby="g-title">
+  <div class="dlg-head"><div><span class="eyebrow" id="g-kind"></span><h3 id="g-title"></h3></div><button class="copy" type="button" id="g-close">Fermer</button></div>
+  <div class="dlg-body" id="g-body"></div>
+</dialog>
+<dialog class="lightbox" id="lb" aria-label="Photo en grand">
+  <button class="lb-btn lb-close" type="button" id="lb-close" aria-label="Fermer">✕</button>
+  <button class="lb-btn lb-prev" type="button" id="lb-prev" aria-label="Photo précédente">‹</button>
+  <img id="lb-img" alt="">
+  <button class="lb-btn lb-next" type="button" id="lb-next" aria-label="Photo suivante">›</button>
+</dialog>
+
+<script>
+/* ===== Séries photo : ajouter une série = ajouter un objet ici ===== */
+const SERIES = [
+  { id:"sam", title:"SA Mérignac Football", kind:"Football", place:"Stade du Jard, Mérignac", photos:[] },
+  { id:"hinault", racing:true, title:"Sortie vélo avec Bernard Hinault", kind:"Cyclisme · Événement caritatif", place:"Pour Souffle d'Espoir CLC", photos:[
+    { src:"photos/velo/01.webp", alt:"Deux cyclistes vus de dos, l'un pose la main sur l'épaule de l'autre" },
+    { src:"photos/velo/02.webp", alt:"Photo de groupe des participants devant un avion de chasse exposé" },
+    { src:"photos/velo/03.webp", alt:"Cycliste au maillot Souffles d'espoir et aux liserés arc-en-ciel, suivi d'une cycliste en orange" },
+    { src:"photos/velo/04.webp", alt:"Cycliste bras croisés au départ, maillot rose et bleu Souffles d'espoir" },
+    { src:"photos/velo/05.webp", alt:"Cycliste appuyé sur son vélo au bord d'une rue, en noir et blanc" },
+    { src:"photos/velo/06.webp", alt:"Les participants applaudissent sous la pergola couverte de lierre" },
+    { src:"photos/velo/07.webp", alt:"Portrait d'un cycliste attablé, entouré de fleurs séchées" },
+    { src:"photos/velo/08.webp", alt:"Le peloton emmené par un cycliste en maillot RCF" },
+    { src:"photos/velo/09.webp", alt:"Profil d'un cycliste en maillot rose devant un mur de verdure" },
+    { src:"photos/velo/10.webp", alt:"Cycliste tête baissée qui range sa poche arrière au bord de la route" },
+    { src:"photos/velo/11.webp", alt:"Un cycliste montre un détail du vélo à un enfant" },
+    { src:"photos/velo/12.webp", alt:"Cycliste casqué qui boit un café pendant la pause" },
+    { src:"photos/velo/13.webp", alt:"Deux cyclistes discutent devant un champ de maïs" },
+    { src:"photos/velo/14.webp", alt:"Portrait d'un participant à lunettes, bras croisés" },
+    { src:"photos/velo/15.webp", alt:"Cycliste en maillot RCF au milieu du groupe" },
+    { src:"photos/velo/16.webp", alt:"Jeune participant qui boit dans un gobelet à la pause" },
+    { src:"photos/velo/17.webp", alt:"Cycliste en maillot RCF casque aéro, devant des panneaux de direction" },
+    { src:"photos/velo/18.webp", alt:"Le buffet d'accueil sous la pergola de lierre" },
+    { src:"photos/velo/19.webp", alt:"Les participants réunis sous l'arche de lierre avant le départ" },
+    { src:"photos/velo/20.webp", alt:"Un cycliste et un enfant penchés sur un vélo le long de la haie" }
+  ] },
+  { id:"natation", racing:true, title:"Compétition de natation", kind:"Natation", place:"Racing Club de France", photos:[
+    { src:"photos/natation/01.webp", alt:"Vue plongeante sur trois nageurs en crawl, séparés par les lignes d'eau jaunes" },
+    { src:"photos/natation/02.webp", alt:"Nageur en plein plongeon de départ, bonnet ciel du Racing" },
+    { src:"photos/natation/03.webp", alt:"Tête d'un nageur au bonnet RCF émergeant de l'eau, ligne d'eau rouge derrière" },
+    { src:"photos/natation/04.webp", alt:"Portrait de profil d'un nageur concentré, bonnet RCF Depuis 1882" },
+    { src:"photos/natation/05.webp", alt:"Nageur de profil, bonnet ciel Racing Club de France" },
+    { src:"photos/natation/06.webp", alt:"Trois nageurs penchés sur les plots au moment du départ" },
+    { src:"photos/natation/07.webp", alt:"Nageur concentré pendant que ses coéquipiers l'encouragent derrière lui" },
+    { src:"photos/natation/08.webp", alt:"Nageur de brasse face à l'objectif dans le couloir 4" },
+    { src:"photos/natation/09.webp", alt:"Bras d'un nageur en crawl au milieu des éclaboussures, couloir 2" },
+    { src:"photos/natation/10.webp", alt:"Nageur en position de départ sur le plot numéro 3" },
+    { src:"photos/natation/11.webp", alt:"Deux nageuses en brasse dans les couloirs 4 et 5" },
+    { src:"photos/natation/12.webp", alt:"Vue d'ensemble de la piscine, du public au balcon et des nageurs au bord du bassin" },
+    { src:"photos/natation/13.webp", alt:"Nageurs, entraîneurs et bénévoles alignés au bord du bassin" },
+    { src:"photos/natation/14.webp", alt:"Nageur en brasse vu de dos dans une gerbe d'eau" },
+    { src:"photos/natation/15.webp", alt:"Deux nageurs qui discutent au bord du bassin sous les fanions RCF" },
+    { src:"photos/natation/16.webp", alt:"Deux nageurs avec planches en attendant leur tour" },
+    { src:"photos/natation/17.webp", alt:"Jeune nageur penché sur le plot, prêt à partir" },
+    { src:"photos/natation/18.webp", alt:"Ligne d'eau jaune et rouge qui file vers le fond du bassin" },
+    { src:"photos/natation/19.webp", alt:"Échauffement collectif des nageurs au bord du bassin" },
+    { src:"photos/natation/20.webp", alt:"Nageurs qui se félicitent après leur course" }
+  ] },
+  { id:"vestiaire", racing:true, title:"Le vestiaire du Racing", kind:"Photo produit", place:"Vêtements du Racing Club de France", photos:[
+    { src:"photos/vestiaire/01.webp", alt:"Maillot rayé ciel et blanc du Racing suspendu à une patère en fonte" },
+    { src:"photos/vestiaire/06.webp", alt:"Gros plan sur l'écusson RCF brodé, maillot suspendu dans le vestiaire" },
+    { src:"photos/vestiaire/02.webp", alt:"Maillot du Racing accroché sur une boiserie en chêne" },
+    { src:"photos/vestiaire/03.webp", alt:"Contre-plongée sur le maillot, rayures ondulées par le tissu" },
+    { src:"photos/vestiaire/05.webp", alt:"Détail de l'écusson RCF sur le maillot plié, lumière tamisée" },
+    { src:"photos/vestiaire/04.webp", alt:"Maillot froissé posé sur une moquette écossaise" }
+  ] }
+];
+
+/* Âge calculé automatiquement */
+(function(){
+  const b = new Date(2002, 11, 20), n = new Date();
+  let a = n.getFullYear() - b.getFullYear();
+  if (n.getMonth() < b.getMonth() || (n.getMonth() === b.getMonth() && n.getDate() < b.getDate())) a--;
+  document.getElementById("age").textContent = a;
+  document.getElementById("year").textContent = n.getFullYear();
+})();
+
+/* Ballon : pentagones */
+(function(){
+  const pts = (cx,cy,r,rot)=>Array.from({length:5},(_,k)=>{const t=(rot+72*k)*Math.PI/180;return (cx+r*Math.cos(t)).toFixed(1)+","+(cy+r*Math.sin(t)).toFixed(1)}).join(" ");
+  const g = document.querySelector("#o-ball .ball-patches");
+  let h = `<polygon class="c-ink" points="${pts(80,80,21,-90)}"/>`;
+  for (let k=0;k<5;k++){const t=(-90+72*k)*Math.PI/180; h += `<polygon class="c-ink" points="${pts(80+62*Math.cos(t),80+62*Math.sin(t),22,90+72*k)}"/>`;}
+  g.innerHTML = h;
+})();
+
+/* Sous-onglets (SA Mérignac) */
+document.querySelectorAll('[role="tablist"]').forEach(list=>{
+  const btns = [...list.querySelectorAll('[role="tab"]')];
+  const select = b => btns.forEach(x=>{const on=x===b; x.setAttribute("aria-selected",on); x.tabIndex=on?0:-1; document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});
+  btns.forEach((b,i)=>{
+    b.addEventListener("click",()=>select(b));
+    b.addEventListener("keydown",e=>{
+      if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();const n=btns[(i+(e.key==="ArrowRight"?1:-1)+btns.length)%btns.length];n.focus();select(n);}
+    });
+  });
+  select(btns.find(b=>b.getAttribute("aria-selected")==="true")||btns[0]);
+});
+
+/* Pages */
+const views = [...document.querySelectorAll(".view")];
+const PARENT = { sam:"projets", "caisse-epargne":"projets", racing:"projets" };
+const ALIAS = { communication:"methode" };
+function go(name, push){
+  name = ALIAS[name] || name;
+  const target = views.find(v=>v.dataset.view===name) || views[0];
+  const n = target.dataset.view;
+  views.forEach(v=>{ const on = v===target; if(on && v.hidden){ v.classList.remove("entering"); void v.offsetWidth; v.classList.add("entering"); } v.hidden = !on; });
+  const navKey = PARENT[n] || n;
+  document.querySelectorAll(".nav a, .seg a").forEach(a=>{
+    if (a.getAttribute("href")==="#"+navKey) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+  });
+  document.title = target.dataset.title || "Pierre Desgenetez";
+  window.scrollTo({top:0, behavior:"auto"});
+  if (push) { try { history.pushState({v:n}, "", "#"+n); } catch(_) {} }
+}
+document.addEventListener("click", e=>{
+  const a = e.target.closest('a[href^="#"]'); if(!a) return;
+  const name = a.getAttribute("href").slice(1);
+  if (!views.some(v=>v.dataset.view===(ALIAS[name]||name))) return;
+  e.preventDefault();
+  if (a.dataset.need) document.getElementById("f-need").value = a.dataset.need;
+  if (a.dataset.serie) { const sid=a.dataset.serie; setTimeout(()=>{ const b=document.querySelector('.serie[data-id="'+sid+'"]'); if(b) b.click(); },60); }
+  go(name, true);
+});
+addEventListener("popstate", e=>go((e.state && e.state.v) || (location.hash||"#accueil").slice(1), false));
+go((location.hash||"#accueil").slice(1), false);
+document.getElementById("to-top").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
+/* Header au défilement */
+const headerEl = document.getElementById("top");
+addEventListener("scroll",()=>headerEl.classList.toggle("scrolled",scrollY>8),{passive:true});
+
+/* Galeries */
+const seriesEl = document.getElementById("series");
+seriesEl.innerHTML = SERIES.map(s=>{
+  const n = s.photos.length;
+  const cover = n ? `<img src="${s.photos[0].src}" alt="${s.photos[0].alt||s.title}" loading="lazy">` : `<div class="ph"><span>Série en préparation</span></div>`;
+  return `<button class="serie" type="button" data-id="${s.id}">
+    <div class="cover">${cover}<span class="count">${n ? n+" photo"+(n>1?"s":"") : "Bientôt"}</span></div>
+    <div><p>${s.kind}</p><h3>${s.title}</h3><p>${s.place}</p></div></button>`;
+}).join("");
+
+
+const rcfEl=document.getElementById("rcf-photos");
+if(rcfEl) rcfEl.innerHTML=SERIES.filter(x=>x.racing).map(x=>{const n=x.photos.length;
+  const cover=n?`<img src="${x.photos[0].src}" alt="" loading="lazy">`:`<div class="ph"><span>Série en préparation</span></div>`;
+  return `<a class="rcf-card" href="#photographie" data-serie="${x.id}"><div class="cover">${cover}<span class="count">${n?n+" photo"+(n>1?"s":""):"Bientôt"}</span></div><strong>${x.title}</strong><span class="go">Voir la série →</span></a>`;}).join("");
+const dlg = document.getElementById("gallery"), gBody = document.getElementById("g-body");
+let current = null, idx = 0;
+seriesEl.addEventListener("click",e=>{
+  const b = e.target.closest(".serie"); if(!b) return;
+  current = SERIES.find(s=>s.id===b.dataset.id);
+  document.getElementById("g-title").textContent = current.title;
+  document.getElementById("g-kind").textContent = current.kind + " · " + current.place;
+  gBody.innerHTML = current.photos.length
+    ? (()=>{ const n = innerWidth < 560 ? 1 : innerWidth < 900 ? 2 : 3; const cols = Array.from({length:n},()=>[]);
+        current.photos.forEach((p,i)=>cols[i%n].push(`<button type="button" data-i="${i}" aria-label="Agrandir la photo ${i+1}"><img src="${p.src}" alt="${p.alt||current.title}" loading="lazy"></button>`));
+        return `<div class="masonry">${cols.map(c=>`<div class="col">${c.join("")}</div>`).join("")}</div>`; })()
+    : `<div class="empty"><svg class="clay" viewBox="0 0 250 190" aria-hidden="true"><use href="#o-camera"/></svg><p>Les photos de cette série arrivent très bientôt.</p></div>`;
+  dlg.showModal();
+});
+document.getElementById("g-close").addEventListener("click",()=>dlg.close());
+dlg.addEventListener("click",e=>{ if(e.target===dlg) dlg.close(); });
+
+const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img");
+const show = i => { idx=(i+current.photos.length)%current.photos.length; lbImg.src=current.photos[idx].src; lbImg.alt=current.photos[idx].alt||current.title; };
+gBody.addEventListener("click",e=>{ const b=e.target.closest("[data-i]"); if(!b) return; show(+b.dataset.i); lb.showModal(); });
+document.querySelectorAll(".ig-grid").forEach(g=>g.addEventListener("click",e=>{
+  const b=e.target.closest("[data-ig]"); if(!b) return;
+  current={ title:"SA Mérignac Football", photos:[...g.querySelectorAll("img")].map(im=>({src:im.getAttribute("src"),alt:im.alt})) };
+  show(+b.dataset.ig); lb.showModal();
+}));
+document.getElementById("lb-close").addEventListener("click",()=>lb.close());
+lb.addEventListener("click",e=>{ if(e.target===lb) lb.close(); });
+document.getElementById("lb-prev").addEventListener("click",()=>show(idx-1));
+document.getElementById("lb-next").addEventListener("click",()=>show(idx+1));
+addEventListener("keydown",e=>{ if(!lb.open) return; if(e.key==="ArrowRight")show(idx+1); if(e.key==="ArrowLeft")show(idx-1); });
+
+/* Copier */
+async function copyText(t, btn){
+  const old = btn.textContent;
+  try { await navigator.clipboard.writeText(t); btn.textContent="Copié"; }
+  catch(_) { btn.textContent="Sélectionnez le texte"; }
+  setTimeout(()=>btn.textContent=old,1800);
+}
+document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",()=>copyText(b.dataset.copy,b)));
+
+/* Formulaire */
+const form = document.getElementById("form"), statusEl = document.getElementById("status");
+let lastMessage = "";
+form.addEventListener("submit",e=>{
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const errs = { "e-name": v("f-name") ? "" : "Indiquez votre nom.",
+                 "e-mail": /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v("f-mail")) ? "" : "Indiquez une adresse email valide, par exemple nom@entreprise.fr.",
+                 "e-msg": v("f-msg") ? "" : "Décrivez votre besoin en quelques mots." };
+  Object.entries(errs).forEach(([k,m])=>document.getElementById(k).textContent=m);
+  if (Object.values(errs).some(Boolean)) return;
+  const subject = `Demande de contact · ${v("f-need")} · ${v("f-name")}`;
+  lastMessage = `${v("f-msg")}\n\n${v("f-name")}${v("f-org") ? " · "+v("f-org") : ""}\n${v("f-mail")}`;
+  statusEl.hidden = false;
+  const a = document.createElement("a");
+  a.href = `mailto:pierre.desgenetez@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lastMessage)}`;
+  a.click();
+});
+document.getElementById("copy-msg").addEventListener("click",e=>copyText(lastMessage,e.currentTarget));
+</script>
+
+</body>
+</html>
