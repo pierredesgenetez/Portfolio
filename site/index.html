@@ -14,7 +14,7 @@
   --white:#ffffff; --ink:#3b413c; --sage:#9db5b2; --foam:#daf0ee; --mint:#94d1be;
   --bg:#ffffff; --surface:#f2f9f8; --surface-2:#e6f4f2; --text:#3b413c; --muted:#66716b; --line:#d6e6e3;
   --btn-bg:#3b413c; --btn-fg:#ffffff; --chip-bg:#daf0ee; --chip-fg:#3b413c; --mint-ink:#2f6f5f; --blob:#e9f6f4;
-  --clay-ink:#3b413c; --clay-sage:#9db5b2; --clay-foam:#daf0ee; --clay-mint:#94d1be; --clay-white:#ffffff; --clay-deep:#7f9995;
+  --clay-ink:#6e7471; --clay-sage:#9fb5b1; --clay-foam:#cdeee6; --clay-mint:#93d4c1; --clay-white:#f1ebe0; --clay-deep:#858b88;
   --shadow:rgba(59,65,60,.20); --grain:.05;
   --f-display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
   --f-body:"Figtree", "Segoe UI", system-ui, sans-serif;
@@ -25,11 +25,11 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#1c211e; --surface:#242a26; --surface-2:#2c3430; --text:#e8f4f1; --muted:#a6b7b2; --line:#36403a;
   --btn-bg:#94d1be; --btn-fg:#1c211e; --chip-bg:#2f3a35; --chip-fg:#daf0ee; --mint-ink:#94d1be; --blob:#222925;
-  --clay-ink:#56615a; --clay-white:#eef7f5; --clay-deep:#6f8783; --shadow:rgba(0,0,0,.45); --grain:.07; color-scheme:dark}}
+  --clay-ink:#6e7471; --clay-white:#f1ebe0; --clay-deep:#858b88; --shadow:rgba(0,0,0,.45); --grain:.07; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#1c211e; --surface:#242a26; --surface-2:#2c3430; --text:#e8f4f1; --muted:#a6b7b2; --line:#36403a;
   --btn-bg:#94d1be; --btn-fg:#1c211e; --chip-bg:#2f3a35; --chip-fg:#daf0ee; --mint-ink:#94d1be; --blob:#222925;
-  --clay-ink:#56615a; --clay-white:#eef7f5; --clay-deep:#6f8783; --shadow:rgba(0,0,0,.45); --grain:.07; color-scheme:dark}
+  --clay-ink:#6e7471; --clay-white:#f1ebe0; --clay-deep:#858b88; --shadow:rgba(0,0,0,.45); --grain:.07; color-scheme:dark}
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -56,7 +56,7 @@ a{color:inherit}
 .deco-blob{position:absolute;border-radius:58% 42% 47% 53% / 48% 56% 44% 52%;background:var(--blob);z-index:-1;pointer-events:none}
 
 /* Clay objects */
-.clay{display:block;filter:drop-shadow(0 16px 18px var(--shadow)) drop-shadow(0 3px 4px var(--shadow));overflow:visible}
+.clay{display:block;max-width:100%;filter:drop-shadow(0 16px 18px var(--shadow)) drop-shadow(0 3px 4px var(--shadow));overflow:visible}
 .c-ink{fill:var(--clay-ink)}.c-sage{fill:var(--clay-sage)}.c-foam{fill:var(--clay-foam)}.c-mint{fill:var(--clay-mint)}.c-white{fill:var(--clay-white)}.c-deep{fill:var(--clay-deep)}
 .k-sage{fill:none;stroke:var(--clay-sage)}.k-mint{fill:none;stroke:var(--clay-mint)}.k-deep{fill:none;stroke:var(--clay-deep)}
 .float{animation:float 7s ease-in-out infinite}
@@ -116,9 +116,9 @@ a{color:inherit}
 .actions{display:flex;flex-wrap:wrap;gap:var(--s3)}
 .hero-art{position:relative;aspect-ratio:1/0.92;max-width:520px;width:100%;justify-self:center}
 .hero-blob{position:absolute;inset:6% 4% 4% 6%;background:var(--surface-2);border-radius:58% 42% 47% 53% / 48% 56% 44% 52%}
-.hero-art .laptop{position:absolute;width:74%;left:12%;top:24%}
+.hero-art .laptop{position:absolute;width:72%;left:14%;top:26%;height:auto}
 .hero-art .brush{position:absolute;width:21%;right:2%;top:2%;--rot:24deg;transform:rotate(24deg)}
-.hero-art .watch{position:absolute;width:24%;left:-2%;top:2%;--rot:-12deg;transform:rotate(-12deg)}
+.hero-art .watch{position:absolute;width:15%;left:2%;top:0;--rot:-14deg;transform:rotate(-14deg);height:auto}
 .hero-art .sticker{right:-2%;bottom:2%;--rot:12deg}
 
 /* Marquee */
@@ -155,7 +155,7 @@ a{color:inherit}
 .teaser strong{font-family:var(--f-display);font-weight:650;font-size:1.5rem;letter-spacing:-.02em}
 .teaser span{color:var(--muted)}
 .teaser .go{font-weight:600;color:var(--mint-ink)}
-.teaser .mini{position:absolute;right:-10px;bottom:-14px;width:84px;opacity:.9;transform:rotate(-12deg)}
+.teaser .mini{height:auto;position:absolute;right:-10px;bottom:-14px;width:84px;opacity:.9;transform:rotate(-12deg)}
 
 /* Communication switch */
 .comm-switch{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s3) var(--s4);margin-bottom:var(--s6)}
@@ -182,7 +182,7 @@ a{color:inherit}
 .method{margin-top:var(--s8);display:grid;gap:var(--s6);align-items:center}
 @media(min-width:900px){.method{grid-template-columns:220px 1fr}}
 .method-art{display:grid;justify-items:center;gap:var(--s3);text-align:center}
-.method-art svg{width:150px}
+.method-art svg,.method-art img{width:190px;height:auto}
 .method-art p{font-family:var(--f-display);font-weight:650;font-size:1.1rem;max-width:16ch}
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3)}
 @media(min-width:700px){.steps{grid-template-columns:repeat(5,1fr)}}
@@ -378,9 +378,10 @@ dialog.lightbox::backdrop{background:transparent}
 .facts div{display:grid;grid-template-columns:8rem 1fr;gap:var(--s3);padding:var(--s4) 0;border-bottom:1.5px solid var(--line)}
 .facts dt{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
 .facts dd{margin:0;min-width:0}
-.about-art{position:relative;height:150px;margin-bottom:var(--s4)}
-.about-art .ball{position:absolute;right:8px;top:0;width:120px;--rot:10deg}
-.about-art .sticker{left:10px;top:20px;--rot:-8deg}
+.about-art{position:relative;margin:0 auto var(--s5);max-width:380px;padding:10px 30px 0}
+.about-art .portrait{display:block;width:100%;height:auto;transform:rotate(2deg);filter:drop-shadow(0 18px 22px var(--shadow)) drop-shadow(0 3px 4px var(--shadow))}
+.about-art .ball{position:absolute;right:-6px;bottom:6%;width:96px;--rot:10deg}
+.about-art .sticker{left:-6px;top:38%;--rot:-8deg}
 
 /* Contact */
 .contact-grid{display:grid;gap:var(--s6)}
@@ -438,17 +439,17 @@ form{display:grid;gap:var(--s4);background:var(--surface);padding:var(--s6);bord
   <defs>
     <filter id="clay" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
       <feGaussianBlur in="SourceAlpha" stdDeviation="2.6" result="blur"/>
-      <feSpecularLighting in="blur" surfaceScale="3.5" specularConstant=".5" specularExponent="18" lighting-color="#ffffff" result="spec">
+      <feSpecularLighting in="blur" surfaceScale="3.5" specularConstant=".28" specularExponent="12" lighting-color="#ffffff" result="spec">
         <feDistantLight azimuth="225" elevation="40"/>
       </feSpecularLighting>
       <feComposite in="spec" in2="SourceAlpha" operator="in" result="specIn"/>
       <feOffset in="blur" dx="-2.5" dy="-3.5" result="off"/>
       <feComposite in="SourceAlpha" in2="off" operator="out" result="rim"/>
       <feGaussianBlur in="rim" stdDeviation="1.4" result="rimBlur"/>
-      <feFlood flood-color="#10140f" flood-opacity=".3"/>
+      <feFlood flood-color="#10140f" flood-opacity=".16"/>
       <feComposite in2="rimBlur" operator="in" result="shade"/>
       <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 -.2" result="grain"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .32 -.14" result="grain"/>
       <feComposite in="grain" in2="SourceAlpha" operator="in" result="grainIn"/>
       <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="shade"/><feMergeNode in="grainIn"/><feMergeNode in="specIn"/></feMerge>
     </filter>
@@ -550,8 +551,8 @@ form{display:grid;gap:var(--s4);background:var(--surface);padding:var(--s6);bord
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="hero-blob"></div>
-        <svg class="clay laptop float squish" viewBox="0 0 220 160"><use href="#o-laptop"/></svg>
-        <svg class="clay watch float d2 squish" viewBox="0 0 140 200"><use href="#o-watch"/></svg>
+        <img class="clay laptop float squish" src="clay/laptop.webp" alt="" width="900" height="839">
+        <img class="clay watch float d2 squish" src="clay/watch.webp" alt="" width="464" height="1513">
         <svg class="clay brush float d3 squish" viewBox="0 0 80 220"><use href="#o-brush"/></svg>
         <div class="sticker">Basé à<b>Paris</b></div>
       </div>
@@ -582,8 +583,8 @@ form{display:grid;gap:var(--s4);background:var(--surface);padding:var(--s6);bord
     </div>
 
     <div class="teasers">
-      <a class="teaser" href="#projets"><span class="eyebrow">Communication</span><strong>Mes projets</strong><span>Deux clubs sportifs et une banque régionale.</span><span class="go">Voir les projets →</span><svg class="clay mini" viewBox="0 0 220 160" aria-hidden="true"><use href="#o-laptop"/></svg></a>
-      <a class="teaser" href="#methode"><span class="eyebrow">Communication</span><strong>Ma méthode</strong><span>Stratégie, charte graphique et réseaux sociaux, étape par étape.</span><span class="go">Découvrir ma méthode →</span><svg class="clay mini" viewBox="0 0 140 200" aria-hidden="true" style="width:58px"><use href="#o-watch"/></svg></a>
+      <a class="teaser" href="#projets"><span class="eyebrow">Communication</span><strong>Mes projets</strong><span>Deux clubs sportifs et une banque régionale.</span><span class="go">Voir les projets →</span><img class="clay mini" src="clay/laptop.webp" alt=""></a>
+      <a class="teaser" href="#methode"><span class="eyebrow">Communication</span><strong>Ma méthode</strong><span>Stratégie, charte graphique et réseaux sociaux, étape par étape.</span><span class="go">Découvrir ma méthode →</span><img class="clay mini" src="clay/puzzle.webp" alt="" style="width:96px"></a>
       <a class="teaser" href="#photographie"><span class="eyebrow">Photographie</span><strong>Mes séries</strong><span>Sport, événements et photo produit.</span><span class="go">Voir les photos →</span><svg class="clay mini" viewBox="0 0 250 190" aria-hidden="true"><use href="#o-camera"/></svg></a>
     </div>
   </div>
@@ -598,26 +599,13 @@ form{display:grid;gap:var(--s4);background:var(--surface);padding:var(--s6);bord
         <span class="eyebrow dot">À propos</span>
         <h2 style="margin-block:var(--s4) var(--s5)">Pierre, <span id="age">23</span> ans, communicant et <span class="scribble">sportif</span></h2>
         <div class="about-text">
-          <p>Titulaire d'un master en communication, j'ai vécu à Caen, Nantes et Bordeaux avant de m'installer à Paris. Le sport m'accompagne partout : j'ai longtemps joué au football, et aujourd'hui je cours en trail.</p>
+          <p>Titulaire d'un master en communication, je suis aujourd'hui basé à Paris. Le sport m'accompagne partout : j'ai longtemps joué au football, et aujourd'hui je cours en trail.</p>
           <p>Ce que j'aime dans la communication, c'est accompagner une marque et apprendre à chaque projet. Chaque client m'ouvre un sujet que je ne connaissais pas, et c'est ce qui me fait avancer.</p>
-        </div>
-        <div class="route">
-          <span class="eyebrow">Mon parcours, version trail</span>
-          <svg viewBox="0 0 640 190" role="img" aria-label="Parcours : Caen, Nantes, Bordeaux, puis Paris aujourd'hui">
-            <path class="r-fill" d="M40 120 C 90 120, 110 78, 160 82 S 230 125, 280 112 S 360 50, 410 62 S 480 110, 520 92 S 580 40, 600 38 L 600 150 L 40 150 Z"/>
-            <path class="r-line" d="M40 120 C 90 120, 110 78, 160 82 S 230 125, 280 112 S 360 50, 410 62 S 480 110, 520 92 S 580 40, 600 38"/>
-            <circle class="r-pt" cx="40" cy="120" r="9"/><circle class="r-pt" cx="220" cy="106" r="9"/><circle class="r-pt" cx="410" cy="62" r="9"/><circle class="r-pt now" cx="600" cy="38" r="11"/>
-            <line class="r-pole" x1="600" y1="27" x2="600" y2="0"/><path class="r-flag" d="M601 1 L 628 8 L 601 16 Z"/>
-            <text class="r-lbl" x="40" y="178" text-anchor="start">Caen</text>
-            <text class="r-lbl" x="220" y="178" text-anchor="middle">Nantes</text>
-            <text class="r-lbl" x="410" y="178" text-anchor="middle">Bordeaux</text>
-            <text class="r-lbl" x="604" y="178" text-anchor="end">Paris</text>
-            <text class="r-sub" x="530" y="22" text-anchor="end">Aujourd'hui</text>
-          </svg>
         </div>
       </div>
       <div>
         <div class="about-art">
+          <img class="portrait" src="clay/pierre.webp" alt="Pierre Desgenetez, un téléphone à la main, en train de filmer au bord d'un terrain" width="900" height="1290">
           <div class="sticker foam">Coureur de<b>trail</b></div>
           <svg class="clay ball float squish" viewBox="0 0 160 160" aria-hidden="true"><use href="#o-ball"/></svg>
         </div>
@@ -1042,8 +1030,8 @@ form{display:grid;gap:var(--s4);background:var(--surface);padding:var(--s6);bord
 
     <div class="method">
       <div class="method-art">
-        <svg class="clay float squish" viewBox="0 0 140 200" aria-hidden="true" style="--rot:-8deg"><use href="#o-watch"/></svg>
-        <p>Des délais tenus et un planning partagé.</p>
+        <img class="clay float squish" src="clay/puzzle.webp" alt="" style="--rot:-6deg">
+        <p>Chaque pièce à sa place : stratégie, charte et contenus s'emboîtent.</p>
       </div>
       <div>
         <h3 style="font-size:1.6rem;margin-bottom:var(--s4)">Ma méthode, en cinq étapes</h3>
@@ -1164,7 +1152,16 @@ form{display:grid;gap:var(--s4);background:var(--surface);padding:var(--s6);bord
 <script>
 /* ===== Séries photo : ajouter une série = ajouter un objet ici ===== */
 const SERIES = [
-  { id:"sam", title:"SA Mérignac Football", kind:"Football", place:"Stade du Jard, Mérignac", photos:[] },
+  { id:"sam", title:"SA Mérignac Football", kind:"Football", place:"Stade du Jard, Mérignac", photos:[
+    { src:"photos/sam/01.webp", alt:"Joueur du SM Caen balle au pied lors du tournoi SAM Elite" },
+    { src:"photos/sam/02.webp", alt:"Duel entre deux U12 sur le synthétique" },
+    { src:"photos/sam/03.webp", alt:"Jeune joueur du SAM sous la pluie, regard concentré" },
+    { src:"photos/sam/04.webp", alt:"Entraîneur du SAM en doudoune, pendant la préparation du derby" },
+    { src:"photos/sam/05.webp", alt:"Joueur de R1 au maillot n°2 qui frappe le ballon" },
+    { src:"photos/sam/06.webp", alt:"Portrait d'un U12 du SAM, maillot rayé bleu et rouge" },
+    { src:"photos/sam/07.webp", alt:"Une équipe réunie en cercle avant un match du tournoi" },
+    { src:"photos/sam/08.webp", alt:"L'arche gonflable aux couleurs du SAM à l'entrée du stade du Jard" }
+  ] },
   { id:"hinault", racing:true, title:"Sortie vélo avec Bernard Hinault", kind:"Cyclisme · Événement caritatif", place:"Pour Souffle d'Espoir CLC", photos:[
     { src:"photos/velo/01.webp", alt:"Deux cyclistes vus de dos, l'un pose la main sur l'épaule de l'autre" },
     { src:"photos/velo/02.webp", alt:"Photo de groupe des participants devant un avion de chasse exposé" },
